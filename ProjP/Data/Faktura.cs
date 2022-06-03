@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjP.Data
 {
-    internal class Faktura
+    public class Faktura
     {
         public int IDFaktura { get; set; }
         public char NIP { get; set; }

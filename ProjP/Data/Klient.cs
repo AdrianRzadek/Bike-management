@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjP.Data
 {
-    internal class Klient
+    public class Klient
     {
         public char PeselID { get; set; }
         public string Nazwisko { get; set; }
