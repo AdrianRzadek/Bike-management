@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjP.Data;
 
 namespace ProjPIV.Data
 {
@@ -18,9 +19,11 @@ namespace ProjPIV.Data
 
         }
 
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
-        { 
+        public DbSet<Rower> Rower { get; set; }
+        public DbSet<Wypożyczenie> Wypożyczenie{ get; set; }
+        public DbSet<Klient> Klient { get; set; }
+        public DbSet<Faktura> Faktura { get; set; }
+        public DbSet<Pracownik> Pracownik { get; set; }
 
-        }
     }
 }
