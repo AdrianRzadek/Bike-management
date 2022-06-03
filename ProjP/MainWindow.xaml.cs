@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProjPIV3._0
+namespace ProjP
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
