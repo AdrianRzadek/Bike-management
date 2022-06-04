@@ -12,7 +12,9 @@ namespace ProjP.Data
         public Rower()
         {
             Wypożyczenia = new HashSet<Wypożyczenie>();
+            
         }
+
 
         public int RowerId { get; set; }
         public string? Kolor { get; set; }
@@ -21,7 +23,7 @@ namespace ProjP.Data
         public float RozmiarOpon { get; set; }
         public int Biegi { get; set; }
 
-        public virtual ICollection<Wypożyczenie> Wypożyczenia { get; set; } 
+        public virtual ICollection<Wypożyczenie> Wypożyczenia { get; set; }
 
     }
 }

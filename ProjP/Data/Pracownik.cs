@@ -8,7 +8,7 @@ namespace ProjP.Data
 {
     public class Pracownik
     {
-        public int IdPracownik { get; set; }
+        public int PracownikId { get; set; }
         public char Pesel { get; set; }
         public string NazwiskoPracownik { get; set; }
         public string ImięPracownik { get; set; }

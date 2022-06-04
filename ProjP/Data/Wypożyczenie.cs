@@ -9,9 +9,24 @@ namespace ProjP.Data
 {
     public class Wypożyczenie
     {
-        public int IDwypożyczenia { get; set; }
+
+        public Wypożyczenie()
+        {
+            Rowery = new HashSet<Rower>();
+            Klienci = new HashSet<Klient>();
+        }
+
+  
+
+
+        public int WypożyczenieId { get; set; }
         public DateTime DataWypożyczenia { get; set; }
         public DateTime DataOddania { get; set; }
         public Decimal Cena { get; set; }
+
+
+        public virtual ICollection<Rower> Rowery { get; set; }
+        public virtual ICollection<Klient> Klienci { get; set; }
+
     }
 }

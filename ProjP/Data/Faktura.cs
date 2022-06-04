@@ -9,7 +9,7 @@ namespace ProjP.Data
 {
     public class Faktura
     {
-        public int IDFaktura { get; set; }
+        public int FakturaId { get; set; }
         public char NIP { get; set; }
         public string Nazwa { get; set; }
         public DateTime DataWystawienia { get; set; }
