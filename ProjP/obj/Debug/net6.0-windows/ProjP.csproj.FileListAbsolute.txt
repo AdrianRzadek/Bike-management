@@ -51,3 +51,16 @@ C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\refint\ProjP.
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ProjP.pdb
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ProjP.genruntimeconfig.cache
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ref\ProjP.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\Antlr3.Runtime.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\Iesi.Collections.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\NHibernate.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\Remotion.Linq.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\Remotion.Linq.EagerFetching.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

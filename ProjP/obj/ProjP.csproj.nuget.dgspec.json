@@ -44,9 +44,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "Microsoft.CrmSdk.CoreAssemblies": {
+            "EntityFramework": {
               "target": "Package",
-              "version": "[9.0.2.42, )"
+              "version": "[6.4.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

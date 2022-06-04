@@ -31,47 +31,37 @@ using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
-
-namespace ProjP
-{
-
-
+namespace ProjP {
+    
+    
     /// <summary>
     /// App
     /// </summary>
-    public partial class App : System.Windows.Application
-    {
-
+    public partial class App : System.Windows.Application {
+        
         /// <summary>
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.5.0")]
-        public void InitializeComponent()
-        {
-
-#line 5 "..\..\..\App.xaml"
+        public void InitializeComponent() {
+            
+            #line 5 "..\..\..\App.xaml"
             this.StartupUri = new System.Uri("MainWindow.xaml", System.UriKind.Relative);
-
-#line default
-#line hidden
+            
+            #line default
+            #line hidden
         }
-
+        
         /// <summary>
         /// Application Entry Point.
         /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.5.0")]
-        public static void Main()
-        {
+        public static void Main() {
             ProjP.App app = new ProjP.App();
             app.InitializeComponent();
             app.Run();
