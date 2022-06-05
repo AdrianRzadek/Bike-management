@@ -64,3 +64,5 @@ C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win-
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\Microsoft.Xrm.Sdk.dll

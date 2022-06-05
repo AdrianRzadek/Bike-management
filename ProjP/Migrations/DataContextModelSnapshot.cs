@@ -25,7 +25,7 @@ namespace ProjP.Migrations
             modelBuilder.Entity("KlientWypożyczenie", b =>
                 {
                     b.Property<string>("KlienciPeselKey")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<int>("WypożyczeniaWypożyczenieId")
                         .HasColumnType("int");
@@ -50,11 +50,13 @@ namespace ProjP.Migrations
 
                     b.Property<string>("NIP")
                         .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Nazwa")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.HasKey("FakturaId");
 
@@ -65,19 +67,23 @@ namespace ProjP.Migrations
                 {
                     b.Property<string>("PeselKey")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("Imię")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("Nazwisko")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("NrTelefon")
                         .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(24)
+                        .HasColumnType("nvarchar(24)");
 
                     b.HasKey("PeselKey");
 
@@ -94,23 +100,28 @@ namespace ProjP.Migrations
 
                     b.Property<string>("ImięPracownik")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("NazwiskoPracownik")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("NrTelefonu")
                         .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(24)
+                        .HasColumnType("nvarchar(24)");
 
                     b.Property<string>("Pesel")
                         .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("Stanowisko")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.HasKey("PracownikId");
 
@@ -129,10 +140,12 @@ namespace ProjP.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Kolor")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("RowerType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<float>("RozmiarOpon")
                         .HasColumnType("real");
@@ -154,6 +167,7 @@ namespace ProjP.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WypożyczenieId"), 1L, 1);
 
                     b.Property<decimal>("Cena")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("DataOddania")

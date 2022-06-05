@@ -10,18 +10,20 @@ namespace ProjP.Data
     public class Klient
     {
 
+        [Key,MaxLength(11),MinLength(11)]
+        public char PeselKey { get; set; }
+        [MaxLength(40)]
+        public string Nazwisko { get; set; }
+        [MaxLength(40)]
+        public string Imię { get; set; }
+        [MaxLength(24)]
+        public char NrTelefon { get; set; }
+
         public Klient()
         {
             Wypożyczenia = new HashSet<Wypożyczenie>();
 
         }
-
-        [Key]
-        public char PeselKey { get; set; }
-        public string Nazwisko { get; set; }
-        public string Imię { get; set; }
-        public char NrTelefon { get; set; }
-
         public virtual ICollection<Wypożyczenie> Wypożyczenia { get; set; }
     }
 }
