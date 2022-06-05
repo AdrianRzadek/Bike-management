@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IjM4ffyHJQ+QhIo+NA70IUNY3p/Wa3/3Sroy7xQUdA8/QwG/T6Ryv8LErADZR9NomwdWt35Y8W9wn2JAkeMDxg==",
+  "dgSpecHash": "HW2pWUyzMDoRIQFhJRc/XtIJZdI+jamA7utf+ZX3heaMgjPsAj3B3ExSa82CaOsSmu9JkAUFMV49sor4EPdgGg==",
   "success": true,
   "projectFilePath": "C:\\Users\\adria\\Documents\\GitHub\\PIV\\ProjP\\ProjP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\adria\\.nuget\\packages\\materialdesigncolors\\2.0.7-ci198\\materialdesigncolors.2.0.7-ci198.nupkg.sha512",
-    "C:\\Users\\adria\\.nuget\\packages\\materialdesignthemes\\4.6.0-ci198\\materialdesignthemes.4.6.0-ci198.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

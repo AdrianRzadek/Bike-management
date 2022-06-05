@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjP"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
        
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized"
           
 >
@@ -20,13 +21,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <MaterialDesign.ColorZone Mode="PrimaryMid" Grid.ColumnSpan="2" HorizontalAligment="Stretch">
+       <materialDesign:ColorZone Mode="PrimaryMid" Grid.ColumnSpan="2" >
             <Grid>
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" HorizontalAlignment="Right"/>
             </Grid>
-        </MaterialDesign.ColorZone>
+        </materialDesign:ColorZone>
         <Grid HorizontalAlignment="Stretch" Grid.Row="1" Background="{StaticResource PrimaryHueMidBrush}">
             
         </Grid>
+        
     </Grid>
 </Window>

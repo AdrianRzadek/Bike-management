@@ -19,7 +19,7 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\adria\.nuget\packages\microsoft.entityframeworkcore.tools\6.0.5</PkgMicrosoft_EntityFrameworkCore_Tools>
-    <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\adria\.nuget\packages\materialdesignthemes\4.6.0-ci198</PkgMaterialDesignThemes>
+    <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\adria\.nuget\packages\materialdesignthemes\4.5.0</PkgMaterialDesignThemes>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\adria\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
   </PropertyGroup>
 </Project>
