@@ -24,5 +24,10 @@ namespace ProjP
         {
             InitializeComponent();
         }
+
+        private void ButtonLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

@@ -8,27 +8,24 @@
         mc:Ignorable="d"
        
         
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized"
-          
->
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-       <materialDesign:ColorZone Mode="PrimaryMid" Grid.ColumnSpan="2" >
-            <Grid>
-                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" HorizontalAlignment="Right"/>
-            </Grid>
-        </materialDesign:ColorZone>
-        <Grid HorizontalAlignment="Stretch" Grid.Row="1" Background="{StaticResource PrimaryHueMidBrush}">
-            
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF1368BD" >
+            <TextBlock Text="Wypożyczalnia Rowerów" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <materialDesign:PopupBox HorizontalAlignment="Right" Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" />
+                <StackPanel>
+                    <Button Content="Wypożyczenia"/>
+                    <Button Content="Klienci"/>
+                    <Button Content="Rowery"/>
+                    <Button Content="Faktury"/>
+                    <Separator/>
+                    <Button x:Name="ButtonLogout_Click" Content="Logout" Click="ButtonLogout_Click"/>
+                </StackPanel>
+            </StackPanel>
         </Grid>
+        <Grid Width="200" HorizontalAlignment="Left" Background="#FF1F3D68">
         
-    </Grid>
+        </Grid>
+        </Grid>
 </Window>
