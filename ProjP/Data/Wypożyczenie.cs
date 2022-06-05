@@ -23,7 +23,8 @@ namespace ProjP.Data
         public DateTime DataWypożyczenia { get; set; }
         public DateTime DataOddania { get; set; }
         public Decimal Cena { get; set; }
-
+        public Faktura Faktura { get; set; }
+        public Pracownik Pracownik { get; set; }
 
         public virtual ICollection<Rower> Rowery { get; set; }
         public virtual ICollection<Klient> Klienci { get; set; }
