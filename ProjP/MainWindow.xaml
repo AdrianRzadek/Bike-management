@@ -35,7 +35,7 @@
     </Window.Triggers>
 
     <Grid Background="LightGray">
-
+        <Frame x:Name="MainW"/>
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1368BD" >
             <TextBlock Text="Wypożyczalnia Rowerów" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
 
