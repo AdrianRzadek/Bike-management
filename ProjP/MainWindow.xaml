@@ -8,8 +8,8 @@
         mc:Ignorable="d"
        
         
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
-    <Grid>
+        Title="MainWindow" Height="600" Width="900" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
+    <Grid Background="LightGray">
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1368BD" >
             <TextBlock Text="Wypożyczalnia Rowerów" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
@@ -20,12 +20,62 @@
                     <Button Content="Rowery"/>
                     <Button Content="Faktury"/>
                     <Separator/>
-                    <Button x:Name="ButtonLogout_Click" Content="Logout" Click="ButtonLogout_Click"/>
+                    <!--<Button x:Name="ButtonLogout_Click" Content="Logout" Click="ButtonLogout_Click"/>-->
                 </StackPanel>
             </StackPanel>
         </Grid>
         <Grid Width="200" HorizontalAlignment="Left" Background="#FF1F3D68">
-        
+            <StackPanel>
+                <Grid Height="150" Background="White">
+                    <Button x:Name="ButtonCloseMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed">
+                        <materialDesign:PackIcon Foreground="#FF1B3861" Kind="ArrowLeft" Width="25" Height="25"/>
+                    </Button>
+                    <Button x:Name="ButtonOpenMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <materialDesign:PackIcon Foreground="#FF1B3861" Kind="Menu" Width="25" Height="25"/>
+                    </Button>
+                </Grid>
+                <ListView Foreground="#FF1368BD">
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="account" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock Text="Klienci" VerticalAlignment="Center" Margin="20 10"/>
+
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock Text="Wypożyczenia" VerticalAlignment="Center" Margin="20 10"/>
+
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="receipt" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock Text="Faktury" VerticalAlignment="Center" Margin="20 10"/>
+
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="bicycle" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock Text="Rowery" VerticalAlignment="Center" Margin="20 10"/>
+
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
         </Grid>
         </Grid>
 </Window>

@@ -9,6 +9,7 @@
       "ProjP/1.0.0": {
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "MaterialDesignColors": "2.0.6",
           "MaterialDesignThemes": "4.5.0",
           "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.Design": "6.0.5",
