@@ -8,36 +8,62 @@
         mc:Ignorable="d"
        
         
-        Title="MainWindow" Height="600" Width="900" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
+        Title="MainWindow" Height="600" Width="1200" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
+    <Window.Resources>
+        <Storyboard x:Key="MenuOpen">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="60"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MenuClose">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="60"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
+            <BeginStoryboard Storyboard="{StaticResource MenuOpen}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
+            <BeginStoryboard Storyboard="{StaticResource MenuClose}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    
     <Grid Background="LightGray">
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1368BD" >
             <TextBlock Text="Wypożyczalnia Rowerów" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
-            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                <materialDesign:PopupBox HorizontalAlignment="Right" Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" />
-                <StackPanel>
-                    <Button Content="Wypożyczenia"/>
-                    <Button Content="Klienci"/>
-                    <Button Content="Rowery"/>
-                    <Button Content="Faktury"/>
-                    <Separator/>
-                    <!--<Button x:Name="ButtonLogout_Click" Content="Logout" Click="ButtonLogout_Click"/>-->
-                </StackPanel>
+            
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+                <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
+                <StackPanel Width="150">
+                        <Button Content="A"/>
+                        <Button Content="S"/>
+                        <Button Content="H"/>
+                        <Separator/>
+                        <Button x:Name="ButtonLogout" Content="Wyloguj" Click="ButtonLogout_Click" />
+                    </StackPanel>
+                </materialDesign:PopupBox>
+               
             </StackPanel>
         </Grid>
-        <Grid Width="200" HorizontalAlignment="Left" Background="#FF1F3D68">
+        <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="#FF1F3D68">
             <StackPanel>
                 <Grid Height="150" Background="White">
-                    <Button x:Name="ButtonCloseMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed">
+                    <Button x:Name="ButtonCloseMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click" Cursor="Hand">
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
-                    <Button x:Name="ButtonOpenMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right">
+                    <Button x:Name="ButtonOpenMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ButtonOpenMenu_Click">
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="Menu" Width="25" Height="25"/>
                     </Button>
                 </Grid>
-                <ListView Foreground="#FF1368BD">
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF1368BD">
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
 
                         </StackPanel>
@@ -45,7 +71,7 @@
 
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="account" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="AccountBoxMultiple" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Klienci" VerticalAlignment="Center" Margin="20 10"/>
 
                         </StackPanel>
@@ -53,7 +79,7 @@
 
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Wypożyczenia" VerticalAlignment="Center" Margin="20 10"/>
 
                         </StackPanel>
@@ -61,7 +87,7 @@
 
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="receipt" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="receipt" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Faktury" VerticalAlignment="Center" Margin="20 10"/>
 
                         </StackPanel>
@@ -69,8 +95,16 @@
 
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="bicycle" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="bicycle" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Rowery" VerticalAlignment="Center" Margin="20 10"/>
+                            
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Account" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <TextBlock Text="Pracownicy" VerticalAlignment="Center" Margin="20 10"/>
 
                         </StackPanel>
                     </ListViewItem>
