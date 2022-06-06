@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ProjP"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
+        Icon="C:\Users\adria\Documents\GitHub\PIV\ProjP\bike-fast.png"
        
         
         Title="MainWindow" Height="600" Width="1200" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
@@ -32,14 +33,15 @@
             <BeginStoryboard Storyboard="{StaticResource MenuClose}"/>
         </EventTrigger>
     </Window.Triggers>
-    
+
     <Grid Background="LightGray">
+
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1368BD" >
             <TextBlock Text="Wypożyczalnia Rowerów" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
-            
+
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
                 <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
-                <StackPanel Width="150">
+                    <StackPanel Width="150">
                         <Button Content="A"/>
                         <Button Content="S"/>
                         <Button Content="H"/>
@@ -47,12 +49,15 @@
                         <Button x:Name="ButtonLogout" Content="Wyloguj" Click="ButtonLogout_Click" />
                     </StackPanel>
                 </materialDesign:PopupBox>
-               
+
             </StackPanel>
         </Grid>
         <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="#FF1F3D68">
             <StackPanel>
-                <Grid Height="150" Background="White">
+
+                <Grid Height="150" Background="White" IsEnabled="True" >
+
+                    <Image Width="250"  Source="C:\Users\adria\Documents\GitHub\PIV\ProjP\bike.jpg" />
                     <Button x:Name="ButtonCloseMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click" Cursor="Hand">
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
@@ -97,7 +102,7 @@
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="bicycle" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Rowery" VerticalAlignment="Center" Margin="20 10"/>
-                            
+
                         </StackPanel>
                     </ListViewItem>
 
@@ -111,5 +116,5 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        </Grid>
+    </Grid>
 </Window>
