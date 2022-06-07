@@ -59,5 +59,23 @@ namespace ProjP
 
         }
 
+        private void btnAddKlient_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            con.Open();
+
+            cmd = new SqlCommand("SELECT Imię FROM Klient;", con);
+            txtBox1.Text = cmd.ExecuteScalar().ToString();
+            cmd = new SqlCommand("SELECT Nazwisko FROM Klient;", con);
+            txtBox2.Text = cmd.ExecuteScalar().ToString();
+            cmd = new SqlCommand("SELECT PeselKey FROM Klient;", con);
+            txtBox3.Text = cmd.ExecuteScalar().ToString();
+            cmd = new SqlCommand("SELECT NrTelefon FROM Klient;", con);
+            txtBox4.Text = cmd.ExecuteScalar().ToString();
+            con.Close();
+
+
+        }
     }
 }

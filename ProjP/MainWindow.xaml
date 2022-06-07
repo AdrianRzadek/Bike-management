@@ -32,22 +32,18 @@
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
             <BeginStoryboard Storyboard="{StaticResource MenuClose}"/>
         </EventTrigger>
-       
+
     </Window.Triggers>
 
     <Grid Background="LightGray">
-        <Frame x:Name="Main" />
+        <Frame x:Name="Main" Margin="20,10,-20,-10" />
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1368BD" >
             <TextBlock Text="Wypożyczalnia Rowerów" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
 
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
                 <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel Width="150">
-                        <Button Content="A"/>
-                        <Button Content="S"/>
-                        <Button Content="H"/>
-                        <Separator/>
-                        <Button x:Name="ButtonLogout" Content="Wyloguj" Click="ButtonLogout_Click" />
+                        <Button x:Name="ButtonLogout" Content="Wyjdź" Click="ButtonLogout_Click" />
                     </StackPanel>
                 </materialDesign:PopupBox>
 
@@ -66,21 +62,22 @@
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="Menu" Width="25" Height="25"/>
                     </Button>
                 </Grid>
-               
+
 
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF1368BD">
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <Frame x:Name="_NavigationFrame0" NavigationUIVisibility="Hidden" />
-                            <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
-
-                        </StackPanel>
+                        <Button x:Name="HomeButton"   Click="HomeButton_Click"  Cursor="Hand" Height="70" Width="200" RenderTransformOrigin="0.525,0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-10,0,0,0" Background="{x:Null}">
+                            <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.647,0.522" Width="190">
+                                <Frame x:Name="_NavigationFrame0" NavigationUIVisibility="Hidden" />
+                                <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                                <TextBlock Text="Home" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20 10"/>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
 
                     <ListViewItem x:Name="klienci"  Height="60" >
-                        <Button x:Name="KlienciButton"   Click="KlienciButton_Click" Cursor="Hand" Height="70" Width="200" RenderTransformOrigin="0.525,0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-8,0,0,0" Background="{x:Null}">
-                            <StackPanel Orientation="Horizontal" Width="202" RenderTransformOrigin="0.322,0.5">
+                        <Button x:Name="KlienciButton"   Click="KlienciButton_Click" Cursor="Hand" Height="70" Width="200" RenderTransformOrigin="0.525,0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-10,0,0,0" Background="{x:Null}">
+                            <StackPanel Orientation="Horizontal" Width="200" RenderTransformOrigin="0.322,0.5" HorizontalAlignment="Stretch">
                                 <Frame x:Name="_NavigationFrame1" NavigationUIVisibility="Hidden" />
                                 <materialDesign:PackIcon Kind="AccountBoxMultiple" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                                 <TextBlock Text="Klienci"  VerticalAlignment="Center" Margin="20 10"/>
@@ -90,39 +87,47 @@
                     </ListViewItem>
 
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <Frame x:Name="_NavigationFrame2" NavigationUIVisibility="Hidden" />
-                            <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Wypożyczenia" VerticalAlignment="Center" Margin="20 10"/>
+                        <Button x:Name="WypożyczeniaButton"   Click="WypożyczeniaButton_Click" Cursor="Hand" Height="70" Width="200" RenderTransformOrigin="0.525,0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-10,0,0,0" Background="{x:Null}">
+                            <StackPanel Orientation="Horizontal">
+                                <Frame x:Name="_NavigationFrame2" NavigationUIVisibility="Hidden" />
+                                <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                                <TextBlock Text="Wypożyczenia" VerticalAlignment="Center" Margin="20 10"/>
 
-                        </StackPanel>
+                            </StackPanel>
+                        </Button>
+                    </ListViewItem>
+
+                    <ListViewItem Height="60" Width="332">
+                        <Button x:Name="FakturyButton"   Click="FakturyButton_Click" Cursor="Hand" Height="70" Width="200" RenderTransformOrigin="0.525,0" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{x:Null}" Margin="-10,0,0,0" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal" Width="200">
+                                <Frame x:Name="_NavigationFrame3" NavigationUIVisibility="Hidden" />
+                                <materialDesign:PackIcon Kind="receipt" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                                <TextBlock Text="Faktury" VerticalAlignment="Center" Margin="20 10"/>
+
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
 
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <Frame x:Name="_NavigationFrame3" NavigationUIVisibility="Hidden" />
-                            <materialDesign:PackIcon Kind="receipt" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Faktury" VerticalAlignment="Center" Margin="20 10"/>
+                        <Button x:Name="RoweryButton"   Click="RoweryButton_Click" Cursor="Hand" Height="70" Width="200" RenderTransformOrigin="0.525,0" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{x:Null}" Margin="-28,0,0,0" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal">
+                                <Frame x:Name="_NavigationFrame4" NavigationUIVisibility="Hidden" />
+                                <materialDesign:PackIcon Kind="bicycle" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                                <TextBlock Text="Rowery" VerticalAlignment="Center" Margin="20 10"/>
 
-                        </StackPanel>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
 
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <Frame x:Name="_NavigationFrame4" NavigationUIVisibility="Hidden" />
-                            <materialDesign:PackIcon Kind="bicycle" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Rowery" VerticalAlignment="Center" Margin="20 10"/>
+                        <Button x:Name="PracownicyButton"   Click="PracownicyButton_Click" Cursor="Hand" Height="70" Width="200" RenderTransformOrigin="0.525,0" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{x:Null}" Margin="-18,0,0,0" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Account" Width="25" Height="25"/>
+                                <Frame x:Name="_NavigationFrame5" NavigationUIVisibility="Hidden" />
+                                <TextBlock Text="Pracownicy" VerticalAlignment="Center" Margin="20 10"/>
 
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <Frame x:Name="_NavigationFrame5" NavigationUIVisibility="Hidden" />
-                            <materialDesign:PackIcon Kind="Account" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Pracownicy" VerticalAlignment="Center" Margin="20 10"/>
-
-                        </StackPanel>
+                            </StackPanel>
+                        </Button>
                     </ListViewItem>
                 </ListView>
             </StackPanel>

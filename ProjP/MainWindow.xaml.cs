@@ -66,15 +66,31 @@ namespace ProjP
         {
             Main.Content = new Klienci();
 
-
-            
-
-
         }
 
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Home();
+        }
 
+        private void WypożyczeniaButton_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Wypożyczenia();
+        }
 
+        private void FakturyButton_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Faktury();
+        }
 
+        private void RoweryButton_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Rowery();
+        }
 
+        private void PracownicyButton_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Pracownicy();
+        }
     }
 }

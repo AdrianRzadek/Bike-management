@@ -15,5 +15,9 @@
         <TextBox x:Name="txtBox2" Margin="467,254,230,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBox3" Margin="467,324,230,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBox4" Margin="467,288,230,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+
+
+
+        <Button x:Name="btnAddKlient" Click="btnAddKlient_Click" Content="Dodaj klienta" Width="150" Margin="203,74,447,344"/>
     </Grid>
 </Page>
