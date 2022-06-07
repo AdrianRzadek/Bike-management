@@ -62,3 +62,16 @@ C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win\
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\App.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\MaterialDesignColors.dll
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Faktury.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Home.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Pracownicy.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Rowery.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Wypożyczenia.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Faktury.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Home.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Pracownicy.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Rowery.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Wypożyczenia.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Klienci.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Klienci.baml

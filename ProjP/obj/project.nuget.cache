@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iKpH6SRj/ioOEro4UEvJmp7qlHx1HcydgBjhrFfkW44H0UZ5YZlArR7zOE7RL0m5gppNCptUetY6BTJS6L8Cjg==",
+  "dgSpecHash": "6h7rioQhEd1fQDrziu6KmExhkNx7g8TwUjOgYqMfQi+oO2qSZ0KOko80aN2S4NJuDOU53vk9L6/r6oNgeXIFug==",
   "success": true,
   "projectFilePath": "C:\\Users\\adria\\Documents\\GitHub\\PIV\\ProjP\\ProjP.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\adria\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
@@ -49,6 +50,7 @@
     "C:\\Users\\adria\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",

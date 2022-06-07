@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
+
 
 namespace ProjP
 {
@@ -20,22 +24,36 @@ namespace ProjP
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
+
+
+        //"Server =.\\SQLExpress;Database=WypozyczalniaRowerow;Trusted_Connection=true;
+
         public MainWindow()
         {
             InitializeComponent();
+            bindDatagrid();
+        }
+        public void bindDatagrid()
+        {
+            
+           // "Server =.\\SQLExpress;Database=WypozyczalniaRowerow;Trusted_Connection=true;
+           
+          
         }
 
-      
-        
+
+
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {
-           ButtonOpenMenu.Visibility = Visibility.Collapsed;
-           ButtonCloseMenu.Visibility = Visibility.Visible;
+            ButtonOpenMenu.Visibility = Visibility.Collapsed;
+            ButtonCloseMenu.Visibility = Visibility.Visible;
         }
 
         private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
         {
-           ButtonOpenMenu.Visibility = Visibility.Visible;
+            ButtonOpenMenu.Visibility = Visibility.Visible;
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
         }
 
@@ -43,5 +61,20 @@ namespace ProjP
         {
             Application.Current.Shutdown();
         }
+
+        private void KlienciButton_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Klienci();
+
+
+            
+
+
+        }
+
+
+
+
+
     }
 }
