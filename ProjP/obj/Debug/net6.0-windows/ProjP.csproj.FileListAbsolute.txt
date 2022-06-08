@@ -70,8 +70,9 @@ C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Faktury.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Pracownicy.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Rowery.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Wypożyczenia.baml
-C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Klienci.g.cs
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
-C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Klienci.baml
-C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Home.g.cs
-C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Home.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\KlienciP.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\HomeP.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\KlienciP.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\HomeP.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Klienci.g.cs

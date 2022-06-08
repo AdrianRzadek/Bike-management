@@ -5,13 +5,28 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProjP"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="1200"
       Title="Pracownicy">
 
-    <Grid>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="115,127,0,0" VerticalAlignment="Top"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="50,136,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
-        <TextBlock HorizontalAlignment="Left" Margin="213,136,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+    <Grid Background="#FFFFF7F7">
 
+
+        <Label Content="Pesel" HorizontalAlignment="Left" Margin="287,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="287,253,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Imię" HorizontalAlignment="Left" Margin="287,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Stanowisko" HorizontalAlignment="Left" Margin="287,311,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Telefon" HorizontalAlignment="Left" Margin="287,378,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <TextBox x:Name="pesel_txt" Width="200" Height="30" Margin="385,172,615,398" Cursor="Arrow" FontSize="16"></TextBox>
+        <TextBox x:Name="nazwisko_txt" Width="200" Height="30" Margin="385,120,615,450" Cursor="Arrow" FontSize="16"/>
+        <TextBox x:Name="imię_txt" Width="200" Height="30" Margin="385,377,615,193" Cursor="Arrow" FontSize="16"/>
+        <TextBox x:Name="stanowisko_txt" Width="200" Height="30" Margin="385,305,615,265" Cursor="Arrow" FontSize="16"/>
+        <TextBox x:Name="telefon_txt" Width="200" Height="30" Margin="385,240,615,330" Cursor="Arrow" FontSize="16"/>
+        <DataGrid x:Name="datagrid" Height="300" Margin="631,115,66,185"/>
+        <Button x:Name="InsertBtn" Content="Wstaw" HorizontalAlignment="Left" Margin="309,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn_Click"/>
+        <Button x:Name="UpdateBtn" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="457,491,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="Usuń" HorizontalAlignment="Left" Margin="608,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn_Click"/>
+        <Button x:Name="ClearDataBtn" Content="Wyczyść" HorizontalAlignment="Left" Margin="763,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn_Click"/>
+        <Label  Content="ID" HorizontalAlignment="Center" Width="100" Margin="0,440,0,-440"/>
+        <TextBox x:Name="search_txt" Width="200" Height="30" Margin="600,440,400,130"/>
     </Grid>
 </Page>

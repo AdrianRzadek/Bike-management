@@ -2555,6 +2555,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.5",
+      "Microsoft.Extensions.DependencyInjection >= 6.0.0",
       "System.Runtime >= 4.3.1"
     ]
   },
@@ -2637,6 +2638,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.5, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           },
           "System.Runtime": {
             "target": "Package",

@@ -33,17 +33,9 @@ namespace ProjP
         public MainWindow()
         {
             InitializeComponent();
-            bindDatagrid();
-        }
-        public void bindDatagrid()
-        {
-            
-           // "Server =.\\SQLExpress;Database=WypozyczalniaRowerow;Trusted_Connection=true;
            
-          
         }
-
-
+      
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {
@@ -70,7 +62,7 @@ namespace ProjP
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Home();
+            Main.Content = new HomeP();
         }
 
         private void WypożyczeniaButton_Click(object sender, RoutedEventArgs e)

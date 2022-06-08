@@ -5,19 +5,27 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProjP"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="1200"
       Title="Klienci">
 
-    <Grid>
-        <Frame x:Name="KlienciFrame" />
-        <Button x:Name="btnSelectklient" Click="btnSelectklient_Click"  Content="Pokaż klienci" Width="150" Margin="435,74,215,344"/>
-        <TextBox x:Name="txtBox1" Margin="467,216,230,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBox2" Margin="467,254,230,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBox3" Margin="467,324,230,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBox4" Margin="467,288,230,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+    <Grid Background="#FFFFF7F7">
 
 
-
-        <Button x:Name="btnAddKlient" Click="btnAddKlient_Click" Content="Dodaj klienta" Width="150" Margin="203,74,447,344"/>
+        <Label Content="Pesel" HorizontalAlignment="Left" Margin="287,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="287,253,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Imię" HorizontalAlignment="Left" Margin="287,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Telefon" HorizontalAlignment="Left" Margin="287,378,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <TextBox x:Name="pesel_txt2" Width="200" Height="30" Margin="385,172,615,398" Cursor="Arrow" FontSize="16"></TextBox>
+        <TextBox x:Name="nazwisko_txt2" Width="200" Height="30" Margin="385,120,615,450" Cursor="Arrow" FontSize="16"/>
+        <TextBox x:Name="imię_txt2" Width="200" Height="30" Margin="385,377,615,193" Cursor="Arrow" FontSize="16"/>
+        <TextBox x:Name="telefon_txt2" Width="200" Height="30" Margin="385,240,615,330" Cursor="Arrow" FontSize="16"/>
+        <DataGrid x:Name="datagrid2" Height="300" Margin="631,115,66,185"/>
+        <Button x:Name="InsertBtn2" Content="Wstaw" HorizontalAlignment="Left" Margin="309,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn2_Click"/>
+        <Button x:Name="UpdateBtn2" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="457,491,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn2_Click"/>
+        <Button x:Name="DeleteBtn2" Content="Usuń" HorizontalAlignment="Left" Margin="608,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn2_Click"/>
+        <Button x:Name="ClearDataBtn2" Content="Wyczyść" HorizontalAlignment="Left" Margin="763,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn2_Click"/>
+        <Label  Content="ID" HorizontalAlignment="Center" Width="100" Margin="0,440,0,-440"/>
+        <TextBox x:Name="search_txt2" Width="200" Height="30" Margin="600,440,400,130"/>
     </Grid>
 </Page>
+
