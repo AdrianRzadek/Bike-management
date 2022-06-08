@@ -21,7 +21,7 @@
         <TextBox x:Name="rozmiarramy_txt" Width="200" Height="30" Margin="385,377,615,193" Cursor="Arrow" FontSize="16"/>
         <TextBox x:Name="rozmiaropon_txt" Width="200" Height="30" Margin="385,305,615,265" Cursor="Arrow" FontSize="16"/>
         <TextBox x:Name="biegi_txt" Width="200" Height="30" Margin="385,240,615,330" Cursor="Arrow" FontSize="16"/>
-        <DataGrid x:Name="datagrid3" Height="300" Margin="631,115,66,185"/>
+        <DataGrid x:Name="datagrid3" Height="300" Margin="631,115,66,185" />
         <Button x:Name="InsertBtn3" Content="Wstaw" HorizontalAlignment="Left" Margin="309,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn3_Click"/>
         <Button x:Name="UpdateBtn3" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="457,491,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn3_Click"/>
         <Button x:Name="DeleteBtn3" Content="Usuń" HorizontalAlignment="Left" Margin="608,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn3_Click"/>

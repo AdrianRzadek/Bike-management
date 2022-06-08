@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjP"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Icon="C:\Users\adria\Documents\GitHub\PIV\ProjP\bike-fast.png"
+        Icon="C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\bike-fast.png"
        
         
         Title="MainWindow" Height="600" Width="1200" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
@@ -36,6 +36,8 @@
     </Window.Triggers>
 
     <Grid Background="LightGray">
+        <materialDesign:PackIcon Foreground="#FF1B3861" Kind="Bicycle" Width="125" Height="125" Margin="566,398,0,0"/>
+        <TextBlock FontSize="72" Height=" 100" Margin="230,0,48,0">Witaj na stronie głównej</TextBlock>
         <Frame x:Name="Main" Margin="20,10,-20,-10" />
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1368BD" >
             <TextBlock Text="Wypożyczalnia Rowerów" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
@@ -54,7 +56,7 @@
 
                 <Grid Height="150" Background="White" IsEnabled="True" >
 
-                    <Image Width="250"  Source="C:\Users\adria\Documents\GitHub\PIV\ProjP\bike.jpg" />
+                    <Image Width="250"  Source="C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\bike.png" />
                     <Button x:Name="ButtonCloseMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click" Cursor="Hand">
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>

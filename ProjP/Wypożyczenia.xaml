@@ -15,7 +15,7 @@
         <Label Content="DataOddania" HorizontalAlignment="Left" Margin="196,249,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Cena" HorizontalAlignment="Left" Margin="196,188,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
 
-        <TextBox x:Name="datawtpożyczenia_txt" Width="200" Height="30" Margin="385,123,615,447" Cursor="Arrow" FontSize="16"></TextBox>
+        <TextBox x:Name="datawypożyczenia_txt" Width="200" Height="30" Margin="385,123,615,447" Cursor="Arrow" FontSize="16"></TextBox>
         <TextBox x:Name="cena_txt" Width="200" Height="30" Margin="385,187,615,383" Cursor="Arrow" FontSize="16"/>
         <TextBox x:Name="dataoddania_txt" Width="200" Height="30" Margin="385,240,615,330" Cursor="Arrow" FontSize="16"/>
         <DataGrid x:Name="datagrid4" Height="300" Margin="631,115,66,185"/>

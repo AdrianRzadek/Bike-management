@@ -43,7 +43,7 @@ namespace ProjP
 
         public void LoadGrid()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Pracownik", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Rower", con);
             DataTable dt = new DataTable();
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();

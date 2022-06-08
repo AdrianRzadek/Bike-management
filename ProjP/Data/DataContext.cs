@@ -13,13 +13,8 @@ namespace ProjP
 {
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
-        {
-            Database.EnsureCreated();
-        }
+   
 
-
-      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server = .\SQLEXPRESS;
@@ -38,24 +33,8 @@ namespace ProjP
 
         
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Klient>().HasData(GetKlienci());
-            base.OnModelCreating(modelBuilder);
+      
         }
 
-        private Klient[] GetKlienci()
-        {
-            return new Klient[]
-            {
-                /*
-                new Klient { PeselKey = 12332112331, Nazwisko = "Tshirt", Imię = "Red", NrTelefon = 123321123},
-                new Klient { PeselKey = 2, Name = "Tshirt", Description = "Blue Color", Price = 10.99},
-                new Klient { PeselKey = 3, Name = "Shirt", Description = "Formal Shirt", Price = 10.99},
-                new Klient { PeselKey = 4, Name = "Socks", Description = "Yellow ", Price = 2},
-            */
-                };
-        }
-
-    }
+    
 }

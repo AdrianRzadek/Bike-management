@@ -16,11 +16,11 @@
         <Label Content="Imię" HorizontalAlignment="Left" Margin="287,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Stanowisko" HorizontalAlignment="Left" Margin="287,311,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Telefon" HorizontalAlignment="Left" Margin="287,378,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
-        <TextBox x:Name="pesel_txt" Width="200" Height="30" Margin="385,172,615,398" Cursor="Arrow" FontSize="16"></TextBox>
-        <TextBox x:Name="nazwisko_txt" Width="200" Height="30" Margin="385,120,615,450" Cursor="Arrow" FontSize="16"/>
-        <TextBox x:Name="imię_txt" Width="200" Height="30" Margin="385,377,615,193" Cursor="Arrow" FontSize="16"/>
+        <TextBox x:Name="pesel_txt" Width="200" Height="30" Margin="385,123,615,447" Cursor="Arrow" FontSize="16"></TextBox>
+        <TextBox x:Name="nazwisko_txt" Width="200" Height="30" Margin="385,253,615,317" Cursor="Arrow" FontSize="16"/>
+        <TextBox x:Name="imię_txt" Width="200" Height="30" Margin="385,187,615,383" Cursor="Arrow" FontSize="16"/>
         <TextBox x:Name="stanowisko_txt" Width="200" Height="30" Margin="385,305,615,265" Cursor="Arrow" FontSize="16"/>
-        <TextBox x:Name="telefon_txt" Width="200" Height="30" Margin="385,240,615,330" Cursor="Arrow" FontSize="16"/>
+        <TextBox x:Name="telefon_txt" Width="200" Height="30" Margin="385,377,615,193" Cursor="Arrow" FontSize="16"/>
         <DataGrid x:Name="datagrid" Height="300" Margin="631,115,66,185"/>
         <Button x:Name="InsertBtn" Content="Wstaw" HorizontalAlignment="Left" Margin="309,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn_Click"/>
         <Button x:Name="UpdateBtn" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="457,491,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn_Click"/>
