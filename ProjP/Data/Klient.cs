@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 namespace ProjP.Data
 {
     public class Klient
-    {
+    {   
 
-        [Key,MaxLength(11),MinLength(11)]
-        public char PeselKey { get; set; }
+        public int KlientId { get; set; }
+        [MaxLength(11),MinLength(11)]
+        public char Pesel { get; set; }
         [MaxLength(40)]
         public string Nazwisko { get; set; }
         [MaxLength(40)]

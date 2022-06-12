@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
-
+using ProjP.Views;
 
 namespace ProjP
 {
@@ -25,10 +25,6 @@ namespace ProjP
     public partial class MainWindow : Window
     {
 
-
-
-
-        //"Server =.\\SQLExpress;Database=WypozyczalniaRowerow;Trusted_Connection=true;
 
         public MainWindow()
         {
@@ -56,7 +52,7 @@ namespace ProjP
 
         private void KlienciButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Klienci();
+            Main.Content = new ClientView();
 
         }
 
@@ -67,22 +63,22 @@ namespace ProjP
 
         private void WypożyczeniaButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Wypożyczenia();
+            Main.Content = new RentalView();
         }
 
         private void FakturyButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Faktury();
+            Main.Content = new InvoiceView();
         }
 
         private void RoweryButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Rowery();
+            Main.Content = new BikeView();
         }
 
         private void PracownicyButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Pracownicy();
+            Main.Content = new EmployeeView();
         }
     }
 }

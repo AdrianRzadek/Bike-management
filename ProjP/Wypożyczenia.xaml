@@ -23,7 +23,16 @@
         <Button x:Name="UpdateBtn4" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="457,491,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn4_Click"/>
         <Button x:Name="DeleteBtn4" Content="Usuń" HorizontalAlignment="Left" Margin="608,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn4_Click"/>
         <Button x:Name="ClearDataBtn4" Content="Wyczyść" HorizontalAlignment="Left" Margin="763,491,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn4_Click"/>
-        <Label  Content="ID" HorizontalAlignment="Left" Width="100" Margin="563,440,0,-440"/>
+        <Label  Content="ID" HorizontalAlignment="Left" Width="37" Margin="563,440,0,130" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
         <TextBox x:Name="search_txt4" Width="200" Height="30" Margin="600,440,400,130" Cursor="Hand"/>
     </Grid>
 </Page>

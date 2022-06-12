@@ -6,10 +6,9 @@
         xmlns:local="clr-namespace:ProjP"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Icon="C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\bike-fast.png"
        
         
-        Title="MainWindow" Height="600" Width="1200" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
+        Title="MainWindow" Height="800" Width="1200" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" WindowStyle="None" Foreground="White">
     <Window.Resources>
         <Storyboard x:Key="MenuOpen">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -56,7 +55,7 @@
 
                 <Grid Height="150" Background="White" IsEnabled="True" >
 
-                    <Image Width="250"  Source="C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\bike.png" />
+                   
                     <Button x:Name="ButtonCloseMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click" Cursor="Hand">
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>

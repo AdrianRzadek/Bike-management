@@ -168,6 +168,11 @@ namespace ProjP.Migrations
                 name: "IX_Wypożyczenie_PracownikId",
                 table: "Wypożyczenie",
                 column: "PracownikId");
+
+
+
+
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

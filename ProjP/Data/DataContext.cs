@@ -6,7 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjP.Data;
-//using System.Data.Entity;
+
+
+
 //using DbContext = System.Data.Entity.DbContext;
 
 namespace ProjP
@@ -21,7 +23,7 @@ namespace ProjP
                                          Database = WypozyczalniaRowerow; Trusted_Connection = True; ");
 
         }
-
+     
 
         //public DataContext() : base("Server=.\\SQLExpress;Database=WypozyczalniaRowerow;Trusted_Connection=true;") { }
 
@@ -31,10 +33,14 @@ namespace ProjP
         public DbSet<Faktura> Faktura { get; set; }
         public DbSet<Pracownik> Pracownik { get; set; }
 
-        
+
 
       
-        }
+
+
+
+
+    }
 
     
 }

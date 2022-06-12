@@ -22,6 +22,21 @@
     <Compile Update="Rowery.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\BikeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ClientView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EmployeeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\InvoiceView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RentalView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Wypożyczenia.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +58,21 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Rowery.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\BikeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ClientView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EmployeeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\InvoiceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RentalView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Wypożyczenia.xaml">

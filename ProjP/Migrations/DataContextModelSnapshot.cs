@@ -24,13 +24,13 @@ namespace ProjP.Migrations
 
             modelBuilder.Entity("KlientWypożyczenie", b =>
                 {
-                    b.Property<string>("KlienciPeselKey")
-                        .HasColumnType("nvarchar(11)");
+                    b.Property<int>("KlienciKlientId")
+                        .HasColumnType("int");
 
                     b.Property<int>("WypożyczeniaWypożyczenieId")
                         .HasColumnType("int");
 
-                    b.HasKey("KlienciPeselKey", "WypożyczeniaWypożyczenieId");
+                    b.HasKey("KlienciKlientId", "WypożyczeniaWypożyczenieId");
 
                     b.HasIndex("WypożyczeniaWypożyczenieId");
 
@@ -65,10 +65,11 @@ namespace ProjP.Migrations
 
             modelBuilder.Entity("ProjP.Data.Klient", b =>
                 {
-                    b.Property<string>("PeselKey")
+                    b.Property<int>("KlientId")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KlientId"), 1L, 1);
 
                     b.Property<string>("Imię")
                         .IsRequired()
@@ -85,7 +86,12 @@ namespace ProjP.Migrations
                         .HasMaxLength(24)
                         .HasColumnType("nvarchar(24)");
 
-                    b.HasKey("PeselKey");
+                    b.Property<string>("Pesel")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.HasKey("KlientId");
 
                     b.ToTable("Klient");
                 });
@@ -210,7 +216,7 @@ namespace ProjP.Migrations
                 {
                     b.HasOne("ProjP.Data.Klient", null)
                         .WithMany()
-                        .HasForeignKey("KlienciPeselKey")
+                        .HasForeignKey("KlienciKlientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

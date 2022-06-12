@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="ProjP.Views.RentalView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjP.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200">
+    <Grid Background="#FFFFF7F7">
+        <Frame x:Name="RentalV" Margin="20,10,-20,-10" />
+        <Label Content="Wypożyczenie ID" HorizontalAlignment="Left" Margin="223,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Data Oddania" HorizontalAlignment="Left" Margin="223,399,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Data Wypożyczenia" HorizontalAlignment="Left" Margin="223,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Cena" HorizontalAlignment="Left" Margin="223,456,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Faktura ID" HorizontalAlignment="Left" Margin="223,528,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Pracownik ID" HorizontalAlignment="Left" Margin="223,599,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+ 
+        <DataGrid x:Name="datagrid5" Height="300" Margin="631,115,66,185" />
+        <Button x:Name="InsertBtn5" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn5_Click"/>
+        <Button x:Name="UpdateBtn5" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn5_Click"/>
+        <Button x:Name="DeleteBtn5" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn5_Click"/>
+        <Button x:Name="ClearDataBtn5" Content="Wyczyść" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn5_Click"/>
+        
+
+
+    </Grid>
+</UserControl>

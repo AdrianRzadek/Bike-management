@@ -51,8 +51,6 @@ C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\refint\ProjP.
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ProjP.pdb
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ProjP.genruntimeconfig.cache
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ref\ProjP.dll
-C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
-C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\EntityFramework.dll
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
@@ -71,9 +69,7 @@ C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Pracownicy.ba
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Rowery.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Wypożyczenia.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
-C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\KlienciP.g.cs
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\HomeP.g.cs
-C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\KlienciP.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\HomeP.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Klienci.g.cs
 C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ProjP.csproj.AssemblyReference.cache
@@ -153,3 +149,15 @@ C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Proj
 C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ProjP.csproj.CopyComplete
 C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ProjP.genruntimeconfig.cache
 C:\Users\adria\OneDrive\Dokumenty\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ref\ProjP.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Klienci.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\BikeView.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\ClientView.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\EmployeeView.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\InvoiceView.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\RentalView.g.cs
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\BikeView.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\ClientView.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\EmployeeView.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\InvoiceView.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\RentalView.baml

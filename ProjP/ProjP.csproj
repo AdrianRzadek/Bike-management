@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
     <PackageReference Include="DocumentFormat.OpenXml" Version="2.16.0" />
-    <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="MaterialDesignColors" Version="2.0.6" />
     <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
@@ -23,6 +23,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
     <PackageReference Include="System.Runtime" Version="4.3.1" />
   </ItemGroup>
 
