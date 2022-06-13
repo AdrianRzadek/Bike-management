@@ -115,10 +115,13 @@ namespace ProjP.ViewModels
                     var ObjEmployee = ObjEmployeeService.Search(CurrentEmployee.PracownikId);
                     if (ObjEmployee != null)
                     {
-                        // CurrentEmployee.Name = ObjEmployee.Name;
-                        //   CurrentEmployee.Age = ObjEmployee.Age;
+                        CurrentEmployee.Pesel = ObjEmployee.Pesel;
+                        CurrentEmployee.NazwiskoPracownik = ObjEmployee.NazwiskoPracownik;
+                        CurrentEmployee.ImięPracownik = ObjEmployee.ImięPracownik;
+                        CurrentEmployee.Stanowisko = ObjEmployee.Stanowisko;
+                        CurrentEmployee.NrTelefonu = ObjEmployee.NrTelefonu;
 
-                    }
+                }
                     else
                     {
                         Message = "Nie znaleziono";

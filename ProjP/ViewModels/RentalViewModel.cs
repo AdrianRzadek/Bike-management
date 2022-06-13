@@ -108,11 +108,15 @@ namespace ProjP.ViewModels
         {
             try
             {
-                var ObjClient = ObjRentalService.Search(CurrentRental.WypożyczenieId);
-                if (ObjClient != null)
+                var ObjRental = ObjRentalService.Search(CurrentRental.WypożyczenieId);
+                if (ObjRental != null)
                 {
-                    // CurrentEmployee.Name = ObjEmployee.Name;
-                    //   CurrentEmployee.Age = ObjEmployee.Age;
+                    CurrentRental.DataWypożyczenia = ObjRental.DataWypożyczenia;
+                    CurrentRental.DataOddania = ObjRental.DataOddania;
+                    CurrentRental.Cena = ObjRental.Cena;
+                    CurrentRental.FakturaId=ObjRental.FakturaId;
+                    CurrentRental.PracownikId = ObjRental.PracownikId;
+
 
                 }
                 else

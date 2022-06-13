@@ -108,11 +108,13 @@ namespace ProjP.ViewModels
         {
             try
             {
-                var ObjClient = ObjInvoiceService.Search(CurrentInvoice.FakturaId);
-                if (ObjClient != null)
+                var ObjInvoice = ObjInvoiceService.Search(CurrentInvoice.FakturaId);
+                if (ObjInvoice != null)
                 {
-                    // CurrentEmployee.Name = ObjEmployee.Name;
-                    //   CurrentEmployee.Age = ObjEmployee.Age;
+                    CurrentInvoice.NIP = ObjInvoice.NIP;
+                    CurrentInvoice.Nazwa = ObjInvoice.Nazwa;
+                    CurrentInvoice.DataWystawienia = ObjInvoice.DataWystawienia;
+                    
 
                 }
                 else

@@ -115,10 +115,13 @@ namespace ProjP.ViewModels
                     var ObjClient = ObjClientService.Search(CurrentClient.KlientId);
                     if (ObjClient != null)
                     {
-                        // CurrentEmployee.Name = ObjEmployee.Name;
-                        //   CurrentEmployee.Age = ObjEmployee.Age;
+                    CurrentClient.Pesel = ObjClient.Pesel;
+                    CurrentClient.Nazwisko = ObjClient.Nazwisko;
+                    CurrentClient.Imię = ObjClient.Imię;
+                    CurrentClient.NrTelefon = ObjClient.NrTelefon;
 
-                    }
+
+                }
                     else
                     {
                         Message = "Nie znaleziono";

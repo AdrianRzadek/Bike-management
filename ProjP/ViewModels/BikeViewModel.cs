@@ -112,8 +112,11 @@ namespace ProjP.ViewModels
                 var ObjBike = ObjBikeService.Search(CurrentBike.RowerId);
                 if (ObjBike != null)
                 {
-                   // CurrentEmployee.Name = ObjEmployee.Name;
-                 //   CurrentEmployee.Age = ObjEmployee.Age;
+                   CurrentBike.Kolor = ObjBike.Kolor;
+                   CurrentBike.RowerType = ObjBike.RowerType;
+                    CurrentBike.RozmiarRamy = ObjBike.RozmiarRamy;
+                    CurrentBike.RozmiarOpon = ObjBike.RozmiarOpon;
+                    CurrentBike.Biegi = ObjBike.Biegi;
 
                 }
                 else
