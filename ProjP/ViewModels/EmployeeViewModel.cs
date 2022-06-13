@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using ProjP.Models;
 using ProjP.Commands;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace ProjP.ViewModels
 {
@@ -84,19 +85,28 @@ namespace ProjP.ViewModels
             }
             public void Save()
             {
-                try
+            try
+            {
+                var IsSaved = ObjEmployeeService.Add(CurrentEmployee);
+                LoadData();
+                if (IsSaved)
                 {
-                    var IsSaved = ObjEmployeeService.Add(CurrentEmployee);
-                    LoadData();
-                    if (IsSaved)
-                        Message = "Pracownik zapisany";
-                    else
-                        Message = "Pracownik nie zapisany błąd";
+                    MessageBox.Show("Dodano dane pracownik", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    Message = "Pracownik zapisany";
                 }
-                catch (Exception ex)
+                else
                 {
 
+                    MessageBox.Show("Nie dodano danych pracownika", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    Message = "Pracownik nie zapisany błąd";
                 }
+            }
+            catch (Exception ex)
+            {
+
+            }
             }
             #endregion
 
@@ -121,12 +131,14 @@ namespace ProjP.ViewModels
                         CurrentEmployee.Stanowisko = ObjEmployee.Stanowisko;
                         CurrentEmployee.NrTelefonu = ObjEmployee.NrTelefonu;
 
+                    MessageBox.Show("Wyszukano pracownik", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
                 }
-                    else
-                    {
-                        Message = "Nie znaleziono";
-                    }
+                else
+                {
+                    MessageBox.Show("Nie znaleźono pracownik", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
+            }
                 catch (Exception ex)
                 {
 
@@ -149,16 +161,19 @@ namespace ProjP.ViewModels
                 try
                 {
                     var IsUpdated = ObjEmployeeService.Update(CurrentEmployee);
-                    if (IsUpdated)
+                LoadData();
+                if (IsUpdated)
                     {
-                        Message = "Employee Update";
-                        LoadData();
-                    }
-                    else
-                    {
-                        Message = "Update Operation Failed";
-                    }
+                    Message = "Employee Update";
+                    MessageBox.Show("Uaktualniono dane pracownika", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    
                 }
+                else
+                {
+                    MessageBox.Show("Nie uaktualniono danych pracownika", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Message = "Update Operation Failed";
+                }
+            }
                 catch (Exception ex)
                 {
                     Message = ex.Message;
@@ -178,16 +193,20 @@ namespace ProjP.ViewModels
                 try
                 {
                     var IsDeleted = ObjEmployeeService.Delete(CurrentEmployee.PracownikId);
-                    if (IsDeleted)
+                LoadData();
+                if (IsDeleted)
                     {
-                        Message = "Pracownik usuniety";
-                        LoadData();
-                    }
-                    else
-                    {
-                        Message = "Błąd operacji";
-                    }
+
+                    Message = "Pracownik usuniety";
+                    MessageBox.Show("Usunięto dane pracownika", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
+                   
                 }
+                else
+                {
+                    MessageBox.Show("Nie usunięto danych pracownik", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Message = "Błąd operacji";
+                }
+            }
                 catch (Exception ex)
                 {
                     Message = ex.Message;

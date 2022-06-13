@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using ProjP.Models;
 using ProjP.Commands;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace ProjP.ViewModels
 {
@@ -84,19 +85,28 @@ namespace ProjP.ViewModels
             }
             public void Save()
             {
-                try
+            try
+            {
+                var IsSaved = ObjClientService.Add(CurrentClient);
+                LoadData();
+                if (IsSaved)
                 {
-                    var IsSaved = ObjClientService.Add(CurrentClient);
-                    LoadData();
-                    if (IsSaved)
-                        Message = "Pracownik zapisany";
-                    else
-                        Message = "Pracownik nie zapisany błąd";
+                    MessageBox.Show("Dodano dane klienta", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    Message = "Pracownik zapisany";
                 }
-                catch (Exception ex)
+                else
                 {
 
+                    MessageBox.Show("Nie dodano danych klienta", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    Message = "Pracownik nie zapisany błąd";
                 }
+            }
+            catch (Exception ex)
+            {
+
+            }
             }
             #endregion
 
@@ -120,13 +130,14 @@ namespace ProjP.ViewModels
                     CurrentClient.Imię = ObjClient.Imię;
                     CurrentClient.NrTelefon = ObjClient.NrTelefon;
 
+                    MessageBox.Show("Wyszukano klienta", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 }
-                    else
-                    {
-                        Message = "Nie znaleziono";
-                    }
+                else
+                {
+                    MessageBox.Show("Nie znaleźono klienta", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
+            }
                 catch (Exception ex)
                 {
 
@@ -149,16 +160,19 @@ namespace ProjP.ViewModels
                 try
                 {
                     var IsUpdated = ObjClientService.Update(CurrentClient);
-                    if (IsUpdated)
+                LoadData();
+                if (IsUpdated)
                     {
-                        Message = "Employee Update";
-                        LoadData();
-                    }
-                    else
-                    {
-                        Message = "Update Operation Failed";
-                    }
+                    Message = "Employee Update";
+                    MessageBox.Show("Uaktualniono dane klienta", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
+                   
                 }
+                else
+                {
+                    MessageBox.Show("Nie uaktualniono danych klienta", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Message = "Update Operation Failed";
+                }
+            }
                 catch (Exception ex)
                 {
                     Message = ex.Message;
@@ -178,16 +192,20 @@ namespace ProjP.ViewModels
                 try
                 {
                     var IsDeleted = ObjClientService.Delete(CurrentClient.KlientId);
-                    if (IsDeleted)
+                LoadData();
+                if (IsDeleted)
                     {
-                        Message = "Pracownik usuniety";
-                        LoadData();
-                    }
-                    else
-                    {
-                        Message = "Błąd operacji";
-                    }
+
+                    Message = "Pracownik usuniety";
+                    MessageBox.Show("Usunięto dane klienta", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    
                 }
+                else
+                {
+                    MessageBox.Show("Nie usunięto danych klienta", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Message = "Błąd operacji";
+                }
+            }
                 catch (Exception ex)
                 {
                     Message = ex.Message;

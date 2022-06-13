@@ -155,11 +155,12 @@ namespace ProjP.ViewModels
             try
             {
                 var IsUpdated = ObjBikeService.Update(CurrentBike);
+                LoadData();
                 if (IsUpdated)
                 {
                     Message = "Employee Update";
                     MessageBox.Show("Uaktualniono dane roweru", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
-                    LoadData();
+                    
                 }
                 else
                 {
@@ -186,11 +187,12 @@ namespace ProjP.ViewModels
             try
             {
                 var IsDeleted = ObjBikeService.Delete(CurrentBike.RowerId);
+                LoadData();
                 if (IsDeleted)
                 {
                     Message = "Pracownik usuniety";
                     MessageBox.Show("Usunięto dane roweru", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
-                    LoadData();
+                    
                 }
                 else
                 {

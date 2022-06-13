@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ProjP.ViewModels
 {
@@ -85,9 +86,18 @@ namespace ProjP.ViewModels
                 var IsSaved = ObjInvoiceService.Add(CurrentInvoice);
                 LoadData();
                 if (IsSaved)
+                {
+                    MessageBox.Show("Dodano dane faktura", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
                     Message = "Pracownik zapisany";
+                }
                 else
+                {
+
+                    MessageBox.Show("Nie dodano danych faktury", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
                     Message = "Pracownik nie zapisany błąd";
+                }
             }
             catch (Exception ex)
             {
@@ -114,12 +124,14 @@ namespace ProjP.ViewModels
                     CurrentInvoice.NIP = ObjInvoice.NIP;
                     CurrentInvoice.Nazwa = ObjInvoice.Nazwa;
                     CurrentInvoice.DataWystawienia = ObjInvoice.DataWystawienia;
-                    
+
+
+                    MessageBox.Show("Wyszukano fakturę", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 }
                 else
                 {
-                    Message = "Nie znaleziono";
+                    MessageBox.Show("Nie znaleźono faktury", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
@@ -144,13 +156,18 @@ namespace ProjP.ViewModels
             try
             {
                 var IsUpdated = ObjInvoiceService.Update(CurrentInvoice);
+                LoadData();
                 if (IsUpdated)
                 {
+                  
+                    
                     Message = "Employee Update";
-                    LoadData();
+                    MessageBox.Show("Uaktualniono dane faktury", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    
                 }
                 else
                 {
+                    MessageBox.Show("Nie uaktualniono danych faktury", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
                     Message = "Update Operation Failed";
                 }
             }
@@ -173,13 +190,18 @@ namespace ProjP.ViewModels
             try
             {
                 var IsDeleted = ObjInvoiceService.Delete(CurrentInvoice.FakturaId);
+                LoadData();
                 if (IsDeleted)
                 {
+                    
+                   
                     Message = "Pracownik usuniety";
-                    LoadData();
+                    MessageBox.Show("Usunięto dane faktury", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    
                 }
                 else
                 {
+                    MessageBox.Show("Nie usunięto danych faktury", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                     Message = "Błąd operacji";
                 }
             }

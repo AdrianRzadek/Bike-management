@@ -39,7 +39,7 @@
         <Button x:Name="InsertBtn5" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn5_Click"/>
         <Button x:Name="UpdateBtn5" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn5_Click"/>
         <Button x:Name="DeleteBtn5" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn5_Click"/>
-        <Button x:Name="ClearDataBtn5" Command="{Binding Path=SearchCommand}" Content="Wyczyść" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn5_Click"/>
+        <Button x:Name="ClearDataBtn5" Command="{Binding Path=SearchCommand}" Content="Szukaj" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn5_Click"/>
         <TextBox Name="wypozyczenieid_txt" Text="{Binding Path=CurrentRental.WypożyczenieId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,157,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox Name="datawypozyczenia_txt" Text="{Binding Path=CurrentRental.DataWypożyczenia, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,232,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox Name="dataoddania_txt"  Text="{Binding Path=CurrentRental.DataOddania, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,295,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>

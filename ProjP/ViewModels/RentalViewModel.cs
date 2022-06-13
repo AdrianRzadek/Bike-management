@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ProjP.ViewModels
 {
@@ -84,11 +85,19 @@ namespace ProjP.ViewModels
             {
                 var IsSaved = ObjRentalService.Add(CurrentRental);
                 LoadData();
-                if (IsSaved)
-                    Message = "Pracownik zapisany";
-                else
-                    Message = "Pracownik nie zapisany błąd";
+                if (IsSaved) { 
+                    MessageBox.Show("Dodano dane wypożyczenia", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                Message = "Pracownik zapisany";
             }
+                else
+            {
+
+                MessageBox.Show("Nie dodano danych wypożyczenia", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                Message = "Pracownik nie zapisany błąd";
+            }
+        }
             catch (Exception ex)
             {
 
@@ -117,11 +126,12 @@ namespace ProjP.ViewModels
                     CurrentRental.FakturaId=ObjRental.FakturaId;
                     CurrentRental.PracownikId = ObjRental.PracownikId;
 
+                    MessageBox.Show("Wyszukano wypożyczenie", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 }
                 else
                 {
-                    Message = "Nie znaleziono";
+                    MessageBox.Show("Nie znaleźono wypożyczenia", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
@@ -146,13 +156,17 @@ namespace ProjP.ViewModels
             try
             {
                 var IsUpdated = ObjRentalService.Update(CurrentRental);
+                LoadData();
                 if (IsUpdated)
                 {
+                   
                     Message = "Employee Update";
-                    LoadData();
+                    MessageBox.Show("Uaktualniono dane wypożyczenia", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
+                  
                 }
                 else
                 {
+                    MessageBox.Show("Nie uaktualniono danych wypożyczenia", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
                     Message = "Update Operation Failed";
                 }
             }
@@ -175,13 +189,18 @@ namespace ProjP.ViewModels
             try
             {
                 var IsDeleted = ObjRentalService.Delete(CurrentRental.WypożyczenieId);
+                LoadData();
                 if (IsDeleted)
                 {
                     Message = "Pracownik usuniety";
-                    LoadData();
+                    
+                   
+                    MessageBox.Show("Usunięto dane wypożyczenia", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
                 }
                 else
                 {
+                    MessageBox.Show("Nie usunięto danych wypożyczenia", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                     Message = "Błąd operacji";
                 }
             }
