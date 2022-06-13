@@ -5,14 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 using ProjP.Models;
 using ProjP.Commands;
 using System.Collections.ObjectModel;
 
 namespace ProjP.ViewModels
 {
-    public class EmpoloyeeViewModel : INotifyPropertyChanged
+    public class EmployeeViewModel : INotifyPropertyChanged
     {
         
        
@@ -29,7 +28,7 @@ namespace ProjP.ViewModels
 
 
             EmployeeService ObjEmployeeService;
-            public EmpoloyeeViewModel()
+            public EmployeeViewModel()
             {
                 ObjEmployeeService = new EmployeeService();
                 LoadData();
@@ -53,7 +52,7 @@ namespace ProjP.ViewModels
 
             private void LoadData()
             {
-            //EmployeesList = new ObservableCollection<EmployeeDTO>(ObjEmployeeService.GetAll());
+            
             EmployeesList = new ObservableCollection<EmployeeDTO>(ObjEmployeeService.GetAll());
             }
 

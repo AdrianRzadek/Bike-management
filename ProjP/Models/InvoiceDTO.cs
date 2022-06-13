@@ -21,8 +21,8 @@ namespace ProjP.Models
             get { return fakturaid; }
             set { fakturaid = value; OnPropertyChanged("FakturaId"); }
         }
-        private char nip;
-        public char NIP
+        private string nip;
+        public string NIP
         {
             get { return nip; }
             set { nip = value; OnPropertyChanged("NIP"); }
@@ -35,12 +35,15 @@ namespace ProjP.Models
         }
 
         private DateTime datawystawienia;
+
+
         public DateTime DataWystawienia
         {
             get { return datawystawienia; }
-            set { datawystawienia = value; OnPropertyChanged("DataWystawienia"); }
-        }
+            set { datawystawienia = value; OnPropertyChanged("DataWypożyczenia"); }
 
+
+        }
 
     }
 }

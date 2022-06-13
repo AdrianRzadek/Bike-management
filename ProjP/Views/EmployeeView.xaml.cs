@@ -25,24 +25,6 @@ namespace ProjP.Views
             InitializeComponent();
         }
 
-        private void InsertBtn3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DeleteBtn3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ClearDataBtn3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void UpdateBtn3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }

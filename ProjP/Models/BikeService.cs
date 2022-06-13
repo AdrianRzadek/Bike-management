@@ -29,7 +29,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_SelectAllEmployees";
+                ObjSqlCommand.CommandText = "udp_SelectAllBikes";
                 ObjSqlConnection.Open();
                 var ObjSqlDataReader = ObjSqlCommand.ExecuteReader();
                 if (ObjSqlDataReader.HasRows)
@@ -66,7 +66,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_InsertEmployee";
+                ObjSqlCommand.CommandText = "udp_InsertBike";
                 ObjSqlCommand.Parameters.AddWithValue("@RowerId", objNewBike.RowerId);
                 ObjSqlCommand.Parameters.AddWithValue("@Kolor", objNewBike.Kolor);
                 ObjSqlCommand.Parameters.AddWithValue("@RowerType", objNewBike.RowerType);
@@ -98,7 +98,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_UpdateEmployee";
+                ObjSqlCommand.CommandText = "udp_UpdateBike";
                   ObjSqlCommand.Parameters.AddWithValue("@RowerId", objBikeToUpdate.RowerId);
                 ObjSqlCommand.Parameters.AddWithValue("@Kolor", objBikeToUpdate.Kolor);
                 ObjSqlCommand.Parameters.AddWithValue("@RowerType", objBikeToUpdate.RowerType);
@@ -128,7 +128,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_DeleteEmployee";
+                ObjSqlCommand.CommandText = "udp_DeleteBike";
                 ObjSqlCommand.Parameters.AddWithValue("@RowerId", rowerid);
 
                 ObjSqlConnection.Open();
@@ -155,7 +155,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_SelectEmployeeById";
+                ObjSqlCommand.CommandText = "udp_SelectBikeById";
                 ObjSqlCommand.Parameters.AddWithValue("@RowerId", rowerid);
 
                 ObjSqlConnection.Open();

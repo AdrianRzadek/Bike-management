@@ -34,8 +34,8 @@ namespace ProjP.Models
             set { nazwiskopracownik = value; OnPropertyChanged("NazwiskoPracownik"); }
         }
 
-        private char pesel;
-        public char Pesel
+        private string pesel;
+        public string Pesel
         {
             get { return pesel; }
             set { pesel = value; OnPropertyChanged("Pesel"); }

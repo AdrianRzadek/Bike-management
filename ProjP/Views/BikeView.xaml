@@ -4,10 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjP.Views"
+             xmlns:vm="clr-namespace:ProjP.ViewModels"
              mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance Type=vm:BikeViewModel}"
              d:DesignHeight="800" d:DesignWidth="1200">
     <Grid Background="#FFFFF7F7">
-        <Frame x:Name="BikeV" Margin="20,10,-20,-10" />
+        
 
         <Label Content="Kolor" HorizontalAlignment="Left" Margin="247,254,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="RozmiarRamy" HorizontalAlignment="Left" Margin="249,400,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
@@ -15,17 +17,35 @@
         <Label Content="RozmiarOpon" HorizontalAlignment="Left" Margin="249,464,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Biegi" HorizontalAlignment="Left" Margin="249,528,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Rower ID" HorizontalAlignment="Left" Margin="249,189,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
-        <DataGrid x:Name="datagrid1" Height="300" Margin="631,115,66,185" />
-        <Button x:Name="InsertBtn1" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn1_Click"/>
-        <Button x:Name="UpdateBtn1" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn1_Click"/>
-        <Button x:Name="DeleteBtn1" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn1_Click"/>
-        <Button x:Name="ClearDataBtn1" Content="Wyczyść" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn1_Click"/>
-        <TextBox Name="rowerid_txt"  HorizontalAlignment="Left" Margin="408,189,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Cursor="Arrow"/>
-        <TextBox Name="kolor_txt" HorizontalAlignment="Left" Margin="408,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="rowertype_txt" HorizontalAlignment="Left" Margin="408,327,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="rozmiarramy_txt" HorizontalAlignment="Left" Margin="408,404,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="rozmiaropon_txt" HorizontalAlignment="Left" Margin="408,468,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="biegi_txt" HorizontalAlignment="Left" Margin="408,532,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="datagrid1" Height="300" AutoGenerateColumns="False"
+                  ItemsSource="{Binding Path=BikesList, Mode=TwoWay}" Margin="600,194,45,306">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Rower Id" Width="auto"
+                  Binding="{Binding Path=RowerId}"/>
+                <DataGridTextColumn Header="Kolor" Width="auto"
+                  Binding="{Binding Path=Pesel}"/>
+                <DataGridTextColumn Header="Rower Typ" Width="auto"
+                  Binding="{Binding Path=RowerType}"/>
+                <DataGridTextColumn Header="Rozmiar ramy" Width="auto"
+                  Binding="{Binding Path=RozmiarRamy}"/>
+                <DataGridTextColumn Header="Rozmiar opon" Width="auto"
+                  Binding="{Binding Path=RozmiarOpon}"/>
+                <DataGridTextColumn Header="Biegi" Width="auto"
+                  Binding="{Binding Path=Biegi}"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="InsertBtn1" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn1_Click"/>
+        <Button x:Name="UpdateBtn1" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn1_Click"/>
+        <Button x:Name="DeleteBtn1" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn1_Click"/>
+        <Button x:Name="ClearDataBtn1" Command="{Binding Path=SearchCommand}" Content="Szukaj" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn1_Click"/>
+        <TextBox Name="rowerid_txt" Text="{Binding Path=CurrentBike.RowerId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,189,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Cursor="Arrow"/>
+        <TextBox Name="kolor_txt" Text="{Binding Path=CurrentBike.Kolor, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="rowertype_txt" Text="{Binding Path=CurrentBike.RowerType, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,327,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="rozmiarramy_txt" Text="{Binding Path=CurrentBike.RozmiarRamy, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,404,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="rozmiaropon_txt" Text="{Binding Path=CurrentBike.RozmiarOpon, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,468,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="biegi_txt" Text="{Binding Path=CurrentBike.Biegi, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,532,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Cursor="Arrow"/>
 
 
     </Grid>

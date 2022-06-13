@@ -40,10 +40,7 @@ namespace ProjP.Migrations
             modelBuilder.Entity("ProjP.Data.Faktura", b =>
                 {
                     b.Property<int>("FakturaId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FakturaId"), 1L, 1);
 
                     b.Property<DateTime>("DataWystawienia")
                         .HasColumnType("datetime2");
@@ -66,10 +63,7 @@ namespace ProjP.Migrations
             modelBuilder.Entity("ProjP.Data.Klient", b =>
                 {
                     b.Property<int>("KlientId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KlientId"), 1L, 1);
 
                     b.Property<string>("Imię")
                         .IsRequired()
@@ -99,10 +93,7 @@ namespace ProjP.Migrations
             modelBuilder.Entity("ProjP.Data.Pracownik", b =>
                 {
                     b.Property<int>("PracownikId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PracownikId"), 1L, 1);
 
                     b.Property<string>("ImięPracownik")
                         .IsRequired()
@@ -137,19 +128,18 @@ namespace ProjP.Migrations
             modelBuilder.Entity("ProjP.Data.Rower", b =>
                 {
                     b.Property<int>("RowerId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RowerId"), 1L, 1);
 
                     b.Property<int>("Biegi")
                         .HasColumnType("int");
 
                     b.Property<string>("Kolor")
+                        .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("RowerType")
+                        .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
@@ -167,14 +157,10 @@ namespace ProjP.Migrations
             modelBuilder.Entity("ProjP.Data.Wypożyczenie", b =>
                 {
                     b.Property<int>("WypożyczenieId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WypożyczenieId"), 1L, 1);
-
-                    b.Property<decimal>("Cena")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<float>("Cena")
+                        .HasColumnType("real");
 
                     b.Property<DateTime>("DataOddania")
                         .HasColumnType("datetime2");

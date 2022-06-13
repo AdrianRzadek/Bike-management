@@ -29,7 +29,7 @@ namespace ProjP.ViewModels
         {
             ObjRentalService = new RentalService();
             LoadData();
-            CurrentRental= new RentalDTO();
+            CurrentRental = new RentalDTO();
             saveCommand = new RelayCommand(Save);
             searchCommand = new RelayCommand(Search);
             updateCommand = new RelayCommand(Update);

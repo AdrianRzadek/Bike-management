@@ -33,8 +33,8 @@ namespace ProjP.Models
             get { return dataoddania; }
             set { dataoddania = value; OnPropertyChanged("DataOddania"); }
         }
-        private decimal cena;
-        public decimal Cena
+        private float cena;
+        public float Cena
         {
             get { return cena; }
             set { cena = value; OnPropertyChanged("Cena"); }

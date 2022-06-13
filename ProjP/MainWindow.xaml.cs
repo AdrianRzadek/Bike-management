@@ -16,6 +16,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
 using ProjP.Views;
+using ProjP.ViewModels;
+using ProjP.Models;
+using System.Data;
+
 
 namespace ProjP
 {
@@ -47,38 +51,61 @@ namespace ProjP
 
         private void ButtonLogout_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+           Application.Current.Shutdown();
         }
 
         private void KlienciButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new ClientView();
+            ClientView client = new ClientView()
+            {
+                DataContext = new ClientViewModel()
+            };
+            Main.Content = client;
 
         }
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new HomeP();
+        Main.Content = new HomeP();
         }
 
         private void WypożyczeniaButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new RentalView();
+            RentalView rental = new RentalView()
+            {
+                DataContext = new RentalViewModel()
+            };
+            Main.Content = rental;
         }
 
         private void FakturyButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new InvoiceView();
+            InvoiceView invoice = new InvoiceView()
+            {
+                DataContext = new InvoiceViewModel()
+            };
+            Main.Content = invoice;
         }
 
         private void RoweryButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new BikeView();
+            BikeView bike = new BikeView()
+            {
+                DataContext = new BikeViewModel()
+            };
+            Main.Content = bike;
         }
 
         private void PracownicyButton_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new EmployeeView();
+
+            EmployeeView employee = new EmployeeView()
+            {
+                DataContext = new EmployeeViewModel()
+            };
+            Main.Content = employee;
         }
+
+     
     }
 }

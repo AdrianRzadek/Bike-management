@@ -11,6 +11,7 @@ namespace ProjP.Models
     public class EmployeeService
     {
 
+
         SqlConnection ObjSqlConnection = new SqlConnection(@"Data Source=localhost\sqlexpress;Initial Catalog=WypozyczalniaRowerow;Integrated Security=True");
         SqlCommand ObjSqlCommand = new SqlCommand();
 
@@ -38,8 +39,8 @@ namespace ProjP.Models
                     while (ObjSqlDataReader.Read())
                     {
                         ObjEmployee = new EmployeeDTO();
-                       ObjEmployee.PracownikId = ObjSqlDataReader.GetInt32(0);
-                        ObjEmployee.Pesel = ObjSqlDataReader.GetChar(1);
+                        ObjEmployee.PracownikId = ObjSqlDataReader.GetInt32(0);
+                        ObjEmployee.Pesel = ObjSqlDataReader.GetString(1);
                         ObjEmployee.NazwiskoPracownik = ObjSqlDataReader.GetString(2);
                         ObjEmployee.ImięPracownik = ObjSqlDataReader.GetString(3);
                         ObjEmployee.Stanowisko = ObjSqlDataReader.GetString(4);
@@ -166,7 +167,7 @@ namespace ProjP.Models
                     ObjSqlDataReader.Read();
                     ObjEmployee = new EmployeeDTO();
                     ObjEmployee.PracownikId = ObjSqlDataReader.GetInt32(0);
-                    ObjEmployee.Pesel = ObjSqlDataReader.GetChar(1);
+                    ObjEmployee.Pesel = ObjSqlDataReader.GetString(1);
                     ObjEmployee.NazwiskoPracownik = ObjSqlDataReader.GetString(2);
                     ObjEmployee.ImięPracownik = ObjSqlDataReader.GetString(3);
                     ObjEmployee.Stanowisko = ObjSqlDataReader.GetString(4);

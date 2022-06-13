@@ -29,7 +29,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_SelectAllEmployees";
+                ObjSqlCommand.CommandText = "udp_SelectAllInvoices";
                 ObjSqlConnection.Open();
                 var ObjSqlDataReader = ObjSqlCommand.ExecuteReader();
                 if (ObjSqlDataReader.HasRows)
@@ -39,9 +39,9 @@ namespace ProjP.Models
                     {
                         ObjInvoice = new InvoiceDTO();
                      ObjInvoice.FakturaId = ObjSqlDataReader.GetInt32(0);
-                        ObjInvoice.NIP = ObjSqlDataReader.GetChar(1);
+                        ObjInvoice.NIP = ObjSqlDataReader.GetString(1);
                         ObjInvoice.Nazwa = ObjSqlDataReader.GetString(2);
-                        ObjInvoice.DataWystawienia = ObjSqlDataReader.GetDateTime(3);
+                        ObjInvoice.DataWystawienia= ObjSqlDataReader.GetDateTime(3);
                         ObjInvoiceList.Add(ObjInvoice);
                     }
                 }
@@ -63,7 +63,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_InsertEmployee";
+                ObjSqlCommand.CommandText = "udp_InsertInvoice";
               ObjSqlCommand.Parameters.AddWithValue("@FakturaId", objNewInvoice.FakturaId);
                 ObjSqlCommand.Parameters.AddWithValue("@NIP", objNewInvoice.NIP);
                 ObjSqlCommand.Parameters.AddWithValue("@Nazwa", objNewInvoice.Nazwa);
@@ -94,7 +94,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_UpdateEmployee";
+                ObjSqlCommand.CommandText = "udp_UpdateInvoice";
                 ObjSqlCommand.Parameters.AddWithValue("@FakturaId", objInvoiceToUpdate.FakturaId);
                 ObjSqlCommand.Parameters.AddWithValue("@NIP", objInvoiceToUpdate.NIP);
                 ObjSqlCommand.Parameters.AddWithValue("@Nazwa", objInvoiceToUpdate.Nazwa);
@@ -122,7 +122,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_DeleteEmployee";
+                ObjSqlCommand.CommandText = "udp_DeleteInvoice";
                 ObjSqlCommand.Parameters.AddWithValue("@FakturaId", fakturaid);
 
                 ObjSqlConnection.Open();
@@ -149,7 +149,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_SelectEmployeeById";
+                ObjSqlCommand.CommandText = "udp_SelectInvoiceById";
                 ObjSqlCommand.Parameters.AddWithValue("@FakturaId", fakturaid);
 
                 ObjSqlConnection.Open();
@@ -160,7 +160,7 @@ namespace ProjP.Models
                     ObjSqlDataReader.Read();
                     ObjInvoice = new InvoiceDTO();
                     ObjInvoice.FakturaId = ObjSqlDataReader.GetInt32(0);
-                    ObjInvoice.NIP = ObjSqlDataReader.GetChar(1);
+                    ObjInvoice.NIP = ObjSqlDataReader.GetString(1);
                     ObjInvoice.Nazwa = ObjSqlDataReader.GetString(2);
                     ObjInvoice.DataWystawienia = ObjSqlDataReader.GetDateTime(3);
 

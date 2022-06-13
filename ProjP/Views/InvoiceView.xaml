@@ -5,21 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjP.Views"
              mc:Ignorable="d" 
+               xmlns:vm="clr-namespace:ProjP.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:InvoiceViewModel}"
              d:DesignHeight="800" d:DesignWidth="1200">
     <Grid Background="#FFFFF7F7">
-        <Frame x:Name="InvoiceV" Margin="20,10,-20,-10" />
+       
         <Label Content="Faktura ID" HorizontalAlignment="Left" Margin="237,286,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Nazwa" HorizontalAlignment="Left" Margin="237,405,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="NIP" HorizontalAlignment="Left" Margin="237,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Data Wystawienia" HorizontalAlignment="Left" Margin="237,480,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
-        <TextBox x:Name="fakturaid_txt" Width="200" Height="30" Margin="385,285,615,485" Cursor="Arrow" FontSize="16"></TextBox>
-        <TextBox x:Name="nip_txt" Width="200" Height="30" Margin="385,344,615,426" Cursor="Arrow" FontSize="16"/>
-        <TextBox x:Name="nazwa_txt" Width="200" Height="30" Margin="385,410,615,360" Cursor="Arrow" FontSize="16"/>
-        <TextBox x:Name="datawystawienia_txt" Width="200" Height="30" Margin="385,471,615,299" Cursor="Arrow" FontSize="16"/>
-        <DataGrid x:Name="datagrid4" Height="300" Margin="631,115,66,185" />
-        <Button x:Name="InsertBtn4" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn4_Click"/>
-        <Button x:Name="UpdateBtn4" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn4_Click"/>
-        <Button x:Name="DeleteBtn4" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn4_Click"/>
-        <Button x:Name="ClearDataBtn4" Content="Wyczyść" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn4_Click"/>
+
+        <DataGrid x:Name="datagrid4" Height="300" AutoGenerateColumns="False"
+                  ItemsSource="{Binding Path=InvoicesList, Mode=TwoWay}" Margin="600,194,45,306">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Faktura Id" Width="auto"
+                  Binding="{Binding Path=FakturaId}"/>
+                <DataGridTextColumn Header="NIP" Width="auto"
+                  Binding="{Binding Path=NIP}"/>
+                <DataGridTextColumn Header="Nazwa" Width="auto"
+                  Binding="{Binding Path=Nazwa}"/>
+                <DataGridTextColumn Header="Data Wystawienia" Width="auto"
+                  Binding="{Binding Path=DataWystawienia}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="InsertBtn4" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn4_Click"/>
+        <Button x:Name="UpdateBtn4" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn4_Click"/>
+        <Button x:Name="DeleteBtn4" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn4_Click"/>
+        <Button x:Name="ClearDataBtn4" Command="{Binding Path=SearchCommand}" Content="Szukaj" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn4_Click"/>
+        <TextBox Name="fakturaid_txt" Text="{Binding Path=CurrentInvoice.FakturaId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,290,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Cursor="Arrow"/>
+        <TextBox  Name="nip_txt" Text="{Binding Path=CurrentInvoice.NIP, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,349,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox  Name="nazwa_txt" Text="{Binding Path=CurrentInvoice.Nazwa, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,409,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox  Name="datawystawienia_txt" Text="{Binding Path=CurrentInvoice.DataWystawienia, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,484,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Cursor="Arrow"/>
+
+
     </Grid>
 </UserControl>

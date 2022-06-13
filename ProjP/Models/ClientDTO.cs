@@ -34,17 +34,18 @@ namespace ProjP.Models
             set { nazwisko = value; OnPropertyChanged("Nazwisko"); }
         }
 
-        private char pesel;
-        public char Pesel
+        private string pesel;
+        public string Pesel
         {
             get { return pesel; }
             set { pesel = value; OnPropertyChanged("Pesel"); }
         }
 
-        private string nrtelefonu;
-        public string NrTelefonu { 
-            get { return nrtelefonu; }
-            set { nrtelefonu = value; OnPropertyChanged("NrTelefonu"); }
+        private string nrtelefon;
+        public string NrTelefon
+        { 
+            get { return nrtelefon; }
+            set { nrtelefon = value; OnPropertyChanged("NrTelefon"); }
         }
 
 

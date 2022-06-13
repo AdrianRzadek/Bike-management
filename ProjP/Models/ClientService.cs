@@ -29,7 +29,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_SelectAllEmployees";
+                ObjSqlCommand.CommandText = "udp_SelectAllClients";
                 ObjSqlConnection.Open();
                 var ObjSqlDataReader = ObjSqlCommand.ExecuteReader();
                 if (ObjSqlDataReader.HasRows)
@@ -39,10 +39,10 @@ namespace ProjP.Models
                     {
                         ObjClient = new ClientDTO();
                         ObjClient.KlientId = ObjSqlDataReader.GetInt32(0);
-                        ObjClient.Pesel = ObjSqlDataReader.GetChar(1);
+                        ObjClient.Pesel = ObjSqlDataReader.GetString(1);
                         ObjClient.Nazwisko = ObjSqlDataReader.GetString(2);
                         ObjClient.Imię = ObjSqlDataReader.GetString(3);
-                        ObjClient.NrTelefonu = ObjSqlDataReader.GetString(4);
+                        ObjClient.NrTelefon = ObjSqlDataReader.GetString(4);
 
                         ObjClientList.Add(ObjClient);
                     }
@@ -65,12 +65,12 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_InsertEmployee";
+                ObjSqlCommand.CommandText = "udp_InsertClient";
                ObjSqlCommand.Parameters.AddWithValue("@KlientId", objNewClient.KlientId);
                 ObjSqlCommand.Parameters.AddWithValue("@Pesel", objNewClient.Pesel);
                 ObjSqlCommand.Parameters.AddWithValue("@Nazwisko", objNewClient.Nazwisko);
                 ObjSqlCommand.Parameters.AddWithValue("@Imię", objNewClient.Imię);
-                ObjSqlCommand.Parameters.AddWithValue("@NrTelefonu", objNewClient.NrTelefonu);
+                ObjSqlCommand.Parameters.AddWithValue("@NrTelefon", objNewClient.NrTelefon);
                 ObjSqlConnection.Open();
                 int NoOfRowsAffected = ObjSqlCommand.ExecuteNonQuery();
                 IsAdded = NoOfRowsAffected > 0;
@@ -96,12 +96,12 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_UpdateEmployee";
+                ObjSqlCommand.CommandText = "udp_UpdateClient";
                 ObjSqlCommand.Parameters.AddWithValue("@KlientId", objClientToUpdate.KlientId);
                 ObjSqlCommand.Parameters.AddWithValue("@Pesel", objClientToUpdate.Pesel);
                 ObjSqlCommand.Parameters.AddWithValue("@Nazwisko", objClientToUpdate.Nazwisko);
                 ObjSqlCommand.Parameters.AddWithValue("@Imię", objClientToUpdate.Imię);
-                ObjSqlCommand.Parameters.AddWithValue("@NrTelefonu", objClientToUpdate.NrTelefonu);
+                ObjSqlCommand.Parameters.AddWithValue("@NrTelefon", objClientToUpdate.NrTelefon);
                 ObjSqlConnection.Open();
                 int NoOfRowsAffected = ObjSqlCommand.ExecuteNonQuery();
                 IsUpdated = NoOfRowsAffected > 0;
@@ -125,7 +125,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_DeleteEmployee";
+                ObjSqlCommand.CommandText = "udp_DeleteClient";
                 ObjSqlCommand.Parameters.AddWithValue("@KlientId", klientid);
 
                 ObjSqlConnection.Open();
@@ -152,7 +152,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_SelectEmployeeById";
+                ObjSqlCommand.CommandText = "udp_SelectClientById";
                 ObjSqlCommand.Parameters.AddWithValue("@KlientId", klientid);
 
                 ObjSqlConnection.Open();
@@ -164,10 +164,10 @@ namespace ProjP.Models
                     ObjClient = new ClientDTO();
                    
                     ObjClient.KlientId = ObjSqlDataReader.GetInt32(0);
-                    ObjClient.Pesel = ObjSqlDataReader.GetChar(1);
+                    ObjClient.Pesel = ObjSqlDataReader.GetString(1);
                     ObjClient.Nazwisko = ObjSqlDataReader.GetString(2);
                     ObjClient.Imię = ObjSqlDataReader.GetString(3);
-                    ObjClient.NrTelefonu = ObjSqlDataReader.GetString(4);
+                    ObjClient.NrTelefon = ObjSqlDataReader.GetString(4);
                 }
                 ObjSqlDataReader.Close();
             }
@@ -183,9 +183,6 @@ namespace ProjP.Models
 
         }
 
-        public static implicit operator ClientService(EmployeeService v)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

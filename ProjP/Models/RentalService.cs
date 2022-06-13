@@ -29,7 +29,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_SelectAllEmployees";
+                ObjSqlCommand.CommandText = "udp_SelectAllRental";
                 ObjSqlConnection.Open();
                 var ObjSqlDataReader = ObjSqlCommand.ExecuteReader();
                 if (ObjSqlDataReader.HasRows)
@@ -41,7 +41,7 @@ namespace ProjP.Models
                         ObjRental.WypożyczenieId = ObjSqlDataReader.GetInt32(0);
                         ObjRental.DataWypożyczenia = ObjSqlDataReader.GetDateTime(1);
                         ObjRental.DataOddania = ObjSqlDataReader.GetDateTime(2);
-                        ObjRental.Cena = ObjSqlDataReader.GetDecimal(3);
+                        ObjRental.Cena = ObjSqlDataReader.GetFloat(3);
                         ObjRental.FakturaId = ObjSqlDataReader.GetInt32(4);
                         ObjRental.PracownikId = ObjSqlDataReader.GetInt32(5);
 
@@ -67,7 +67,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_InsertEmployee";
+                ObjSqlCommand.CommandText = "udp_InsertRental";
                 ObjSqlCommand.Parameters.AddWithValue("@WypożyczenieId", objNewRental.WypożyczenieId);
                 ObjSqlCommand.Parameters.AddWithValue("@DataWypożyczenia", objNewRental.DataWypożyczenia);
                 ObjSqlCommand.Parameters.AddWithValue("@DataOddania", objNewRental.DataOddania);
@@ -99,7 +99,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_UpdateEmployee";
+                ObjSqlCommand.CommandText = "udp_UpdateRental";
                 ObjSqlCommand.Parameters.AddWithValue("@WypożyczenieId", objRentalToUpdate.WypożyczenieId);
                 ObjSqlCommand.Parameters.AddWithValue("@DataWypożyczenia", objRentalToUpdate.DataWypożyczenia);
                 ObjSqlCommand.Parameters.AddWithValue("@DataOddania", objRentalToUpdate.DataOddania);
@@ -129,7 +129,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_DeleteEmployee";
+                ObjSqlCommand.CommandText = "udp_DeleteRental";
                 ObjSqlCommand.Parameters.AddWithValue("@WypożyczenieId", wypożyczenieid);
 
                 ObjSqlConnection.Open();
@@ -156,7 +156,7 @@ namespace ProjP.Models
             try
             {
                 ObjSqlCommand.Parameters.Clear();
-                ObjSqlCommand.CommandText = "udp_SelectEmployeeById";
+                ObjSqlCommand.CommandText = "udp_SelectRentalById";
                 ObjSqlCommand.Parameters.AddWithValue("@WypożyczenieId", wypożyczenieid);
 
                 ObjSqlConnection.Open();
@@ -169,7 +169,7 @@ namespace ProjP.Models
                     ObjRental.WypożyczenieId = ObjSqlDataReader.GetInt32(0);
                     ObjRental.DataWypożyczenia = ObjSqlDataReader.GetDateTime(1);
                     ObjRental.DataOddania = ObjSqlDataReader.GetDateTime(2);
-                    ObjRental.Cena = ObjSqlDataReader.GetDecimal(3);
+                    ObjRental.Cena = ObjSqlDataReader.GetFloat(3);
                     ObjRental.FakturaId = ObjSqlDataReader.GetInt32(4);
                     ObjRental.PracownikId = ObjSqlDataReader.GetInt32(5);
                 }

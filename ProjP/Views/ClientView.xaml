@@ -4,25 +4,44 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjP.Views"
+             xmlns:vm="clr-namespace:ProjP.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:ClientViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1200">
+    
     <Grid Background="#FFFFF7F7">
-        <Frame x:Name="ClientV" Margin="20,10,-20,-10" />
+        
         <Label Content="Klient ID" HorizontalAlignment="Left" Margin="233,274,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="233,394,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Pesel" HorizontalAlignment="Left" Margin="237,336,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Imię" HorizontalAlignment="Left" Margin="237,456,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Nr Telefonu" HorizontalAlignment="Left" Margin="233,528,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
 
-        <DataGrid x:Name="datagrid2" Height="300" Margin="631,115,66,185" />
-        <Button x:Name="InsertBtn2" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn2_Click"/>
-        <Button x:Name="UpdateBtn2" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn2_Click"/>
-        <Button x:Name="DeleteBtn2" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn2_Click"/>
-        <Button x:Name="ClearDataBtn2" Content="Wyczyść" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn2_Click"/>
-        <TextBox HorizontalAlignment="Left" Margin="386,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="386,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="386,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="386,460,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="386,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="datagrid2" Height="300" AutoGenerateColumns="False"
+                  ItemsSource="{Binding Path=ClientsList, Mode=TwoWay}" Margin="600,194,45,306">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Klient Id" Width="auto"
+                  Binding="{Binding Path=KlientId}"/>
+                <DataGridTextColumn Header="Pesel" Width="auto"
+                  Binding="{Binding Path=Pesel}"/>
+                <DataGridTextColumn Header="Nazwisko" Width="auto"
+                  Binding="{Binding Path=Nazwisko}"/>
+                <DataGridTextColumn Header="Imię" Width="auto"
+                  Binding="{Binding Path=Imię}"/>
+                <DataGridTextColumn Header="Nr Telefonu" Width="auto"
+                  Binding="{Binding Path=NrTelefon}"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="InsertBtn2" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn2_Click"/>
+        <Button x:Name="UpdateBtn2" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn2_Click"/>
+        <Button x:Name="DeleteBtn2" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn2_Click"/>
+        <Button x:Name="ClearDataBtn2" Command="{Binding Path=SearchCommand}" Content="Szukaj" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn2_Click"/>
+        <TextBox Name="klientid_txt" Text="{Binding Path=CurrentClient.KlientId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="pesel_txt" Text="{Binding Path=CurrentClient.Pesel, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="nazwisko_txt" Text="{Binding Path=CurrentClient.Nazwisko, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="imie_txt" Text="{Binding Path=CurrentClient.Imię, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,460,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="nrtelefonu_txt" Text="{Binding Path=CurrentClient.NrTelefon, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="Arrow"/>
     </Grid>
 </UserControl>

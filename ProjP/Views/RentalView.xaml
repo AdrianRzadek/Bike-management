@@ -5,22 +5,48 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjP.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1200">
-    <Grid Background="#FFFFF7F7">
-        <Frame x:Name="RentalV" Margin="20,10,-20,-10" />
-        <Label Content="Wypożyczenie ID" HorizontalAlignment="Left" Margin="223,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
-        <Label Content="Data Oddania" HorizontalAlignment="Left" Margin="223,399,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
-        <Label Content="Data Wypożyczenia" HorizontalAlignment="Left" Margin="223,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
-        <Label Content="Cena" HorizontalAlignment="Left" Margin="223,456,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
-        <Label Content="Faktura ID" HorizontalAlignment="Left" Margin="223,528,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
-        <Label Content="Pracownik ID" HorizontalAlignment="Left" Margin="223,599,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
- 
-        <DataGrid x:Name="datagrid5" Height="300" Margin="631,115,66,185" />
-        <Button x:Name="InsertBtn5" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn5_Click"/>
-        <Button x:Name="UpdateBtn5" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn5_Click"/>
-        <Button x:Name="DeleteBtn5" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn5_Click"/>
-        <Button x:Name="ClearDataBtn5" Content="Wyczyść" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn5_Click"/>
+             d:DesignHeight="800" d:DesignWidth="1200"
+              xmlns:vm="clr-namespace:ProjP.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:RentalViewModel}">
+        <Grid Background="#FFFFF7F7">
         
+        <Label Content="Wypożyczenie ID" HorizontalAlignment="Left" Margin="174,157,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Data Oddania" HorizontalAlignment="Left" Margin="174,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Data Wypożyczenia" HorizontalAlignment="Left" Margin="174,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Cena" HorizontalAlignment="Left" Margin="174,348,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Faktura ID" HorizontalAlignment="Left" Margin="174,420,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+        <Label Content="Pracownik ID" HorizontalAlignment="Left" Margin="174,491,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
+
+        <DataGrid x:Name="datagrid5" Height="300" AutoGenerateColumns="False"
+                  ItemsSource="{Binding Path=RentalsList, Mode=TwoWay}" Margin="536,202,10,298">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Wypożyczenie Id" Width="auto"
+                  Binding="{Binding Path=WypożyczenieId}"/>
+                <DataGridTextColumn Header="Data Wypożyczenia" Width="auto"
+                  Binding="{Binding Path=DataWypożyczenia}"/>
+                <DataGridTextColumn Header="Data Oddania" Width="auto"
+                  Binding="{Binding Path=DataOddania}"/>
+                <DataGridTextColumn Header="Cena" Width="auto"
+                  Binding="{Binding Path=Cena}"/>
+                <DataGridTextColumn Header="Faktura ID" Width="auto"
+                  Binding="{Binding Path=FakturaId}"/>
+                <DataGridTextColumn Header="Pracownik ID" Width="auto"
+                  Binding="{Binding Path=PracownikId}"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="InsertBtn5" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn5_Click"/>
+        <Button x:Name="UpdateBtn5" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn5_Click"/>
+        <Button x:Name="DeleteBtn5" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn5_Click"/>
+        <Button x:Name="ClearDataBtn5" Command="{Binding Path=SearchCommand}" Content="Wyczyść" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn5_Click"/>
+        <TextBox Name="wypozyczenieid_txt" Text="{Binding Path=CurrentRental.WypożyczenieId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,157,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="datawypozyczenia_txt" Text="{Binding Path=CurrentRental.DataWypożyczenia, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,232,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="dataoddania_txt"  Text="{Binding Path=CurrentRental.DataOddania, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,295,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="cena_txt" Text="{Binding Path=CurrentRental.Cena, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,352,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="fakturaid_txt" Text="{Binding Path=CurrentRental.FakturaId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,424,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="pracownikid_txt" Text="{Binding Path=CurrentRental.PracownikId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="386,495,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Cursor="Arrow"/>
+
 
 
     </Grid>
