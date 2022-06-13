@@ -105,7 +105,7 @@ namespace ProjP.Models
               ObjSqlCommand.Parameters.AddWithValue("@NazwiskoPracownik", objEmployeeToUpdate.NazwiskoPracownik);
                 ObjSqlCommand.Parameters.AddWithValue("@ImięPracownik", objEmployeeToUpdate.ImięPracownik);
                 ObjSqlCommand.Parameters.AddWithValue("@Stanowisko", objEmployeeToUpdate.Stanowisko);
-                ObjSqlCommand.Parameters.AddWithValue("@NrTelefonu", objEmployeeToUpdate.NrTelefonu);
+              ObjSqlCommand.Parameters.AddWithValue("@NrTelefonu", objEmployeeToUpdate.NrTelefonu);
                 ObjSqlConnection.Open();
                 int NoOfRowsAffected = ObjSqlCommand.ExecuteNonQuery();
                 IsUpdated = NoOfRowsAffected > 0;
@@ -171,7 +171,7 @@ namespace ProjP.Models
                     ObjEmployee.NazwiskoPracownik = ObjSqlDataReader.GetString(2);
                     ObjEmployee.ImięPracownik = ObjSqlDataReader.GetString(3);
                     ObjEmployee.Stanowisko = ObjSqlDataReader.GetString(4);
-                    ObjEmployee.NrTelefonu = ObjSqlDataReader.GetString(5);
+                   ObjEmployee.NrTelefonu = ObjSqlDataReader.GetString(5);
                 }
                 ObjSqlDataReader.Close();
             }

@@ -51,7 +51,8 @@ namespace ProjP.Models
 
 
         private string nrtelefonu;
-        public string NrTelefonu { 
+        public string NrTelefonu
+        { 
             get { return nrtelefonu; }
             set { nrtelefonu = value; OnPropertyChanged("NrTelefonu"); }
         }

@@ -23,7 +23,7 @@
                 <DataGridTextColumn Header="Rower Id" Width="auto"
                   Binding="{Binding Path=RowerId}"/>
                 <DataGridTextColumn Header="Kolor" Width="auto"
-                  Binding="{Binding Path=Pesel}"/>
+                  Binding="{Binding Path=Kolor}"/>
                 <DataGridTextColumn Header="Rower Typ" Width="auto"
                   Binding="{Binding Path=RowerType}"/>
                 <DataGridTextColumn Header="Rozmiar ramy" Width="auto"
