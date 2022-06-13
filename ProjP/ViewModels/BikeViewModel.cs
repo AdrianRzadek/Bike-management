@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using ProjP.Models;
 using ProjP.Commands;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace ProjP.ViewModels
 {
@@ -86,9 +87,15 @@ namespace ProjP.ViewModels
                 var IsSaved = ObjBikeService.Add(CurrentBike);
                 LoadData();
                 if (IsSaved)
+                {
+                    MessageBox.Show("Dodano dane roweru", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
                     Message = "Pracownik zapisany";
+                }
                 else
+                {
+                    MessageBox.Show("Nie dodano danych roweru", "Dodawanie", MessageBoxButton.OK, MessageBoxImage.Information);
                     Message = "Pracownik nie zapisany błąd";
+                }
             }
             catch (Exception ex)
             {
@@ -118,10 +125,12 @@ namespace ProjP.ViewModels
                     CurrentBike.RozmiarOpon = ObjBike.RozmiarOpon;
                     CurrentBike.Biegi = ObjBike.Biegi;
 
+                    MessageBox.Show("Wyszukano rower", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
+
                 }
                 else
                 {
-                    Message = "Nie znaleziono";
+                    MessageBox.Show("Nie znaleźono roweru", "Wyszukiwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
@@ -149,10 +158,12 @@ namespace ProjP.ViewModels
                 if (IsUpdated)
                 {
                     Message = "Employee Update";
+                    MessageBox.Show("Uaktualniono dane roweru", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
                     LoadData();
                 }
                 else
                 {
+                    MessageBox.Show("Nie uaktualniono danych roweru", "Uaktualnianie", MessageBoxButton.OK, MessageBoxImage.Information);
                     Message = "Update Operation Failed";
                 }
             }
@@ -178,10 +189,12 @@ namespace ProjP.ViewModels
                 if (IsDeleted)
                 {
                     Message = "Pracownik usuniety";
+                    MessageBox.Show("Usunięto dane roweru", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                     LoadData();
                 }
                 else
                 {
+                    MessageBox.Show("Nie usunięto danych roweru", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Information);
                     Message = "Błąd operacji";
                 }
             }
