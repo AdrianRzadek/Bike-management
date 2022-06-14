@@ -106,6 +106,9 @@ namespace ProjP
             Main.Content = employee;
         }
 
-     
+        private void TextBlock_ColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color> e)
+        {
+
+        }
     }
 }

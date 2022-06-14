@@ -8,8 +8,8 @@
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=vm:BikeViewModel}"
              d:DesignHeight="800" d:DesignWidth="1200">
-    <Grid Background="#FFFFF7F7">
-        
+    <Grid Background="White">
+
 
         <Label Content="Kolor" HorizontalAlignment="Left" Margin="247,254,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="RozmiarRamy" HorizontalAlignment="Left" Margin="249,400,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
@@ -36,10 +36,10 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="InsertBtn1" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="287,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn1_Click"/>
-        <Button x:Name="UpdateBtn1" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="456,714,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn1_Click"/>
-        <Button x:Name="DeleteBtn1" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="600,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn1_Click"/>
-        <Button x:Name="ClearDataBtn1" Command="{Binding Path=SearchCommand}" Content="Szukaj" HorizontalAlignment="Left" Margin="782,714,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn1_Click"/>
+        <Button x:Name="InsertBtn1" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="257,692,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="InsertBtn1_Click"/>
+        <Button x:Name="UpdateBtn1" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="427,692,0,0" VerticalAlignment="Top" Cursor="Hand" Click="UpdateBtn1_Click"/>
+        <Button x:Name="DeleteBtn1" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="596,692,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="DeleteBtn1_Click"/>
+        <Button x:Name="ClearDataBtn1" Command="{Binding Path=SearchCommand}" Content="Szukaj" HorizontalAlignment="Left" Margin="778,692,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" Click="ClearDataBtn1_Click"/>
         <TextBox Name="rowerid_txt" Text="{Binding Path=CurrentBike.RowerId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,189,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Cursor="Arrow"/>
         <TextBox Name="kolor_txt" Text="{Binding Path=CurrentBike.Kolor, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox Name="rowertype_txt" Text="{Binding Path=CurrentBike.RowerType, Mode=TwoWay}" HorizontalAlignment="Left" Margin="408,327,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>

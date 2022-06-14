@@ -161,3 +161,4 @@ C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\Invoice
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\Views\RentalView.baml
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\adria\Documents\GitHub\PIV\ProjP\obj\Debug\net6.0-windows\ProjP_Content.g.cs

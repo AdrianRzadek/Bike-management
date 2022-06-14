@@ -37,13 +37,18 @@
 
     </Window.Triggers>
 
-    <Grid Background="LightGray">
+    <Grid Background="White">
+
+        <Image Source="C:\Users\adria\Documents\GitHub\PIV\ProjP\bikeride.png" OpacityMask="Black" Margin="20,339,-20,51" />
+        <TextBlock Foreground="#FF1368BD" Margin="200,173,160,461" FontSize="72">Witaj na stronie głównej!</TextBlock>
         <Frame Name="Main" Content="Main" Margin="20,10,-20,-10" />
 
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1368BD" >
+
             <TextBlock Text="Wypożyczalnia Rowerów" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
 
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+
                 <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel Width="150">
                         <Button x:Name="ButtonLogout" Content="Wyjdź" Click="ButtonLogout_Click" />
@@ -53,17 +58,20 @@
             </StackPanel>
         </Grid>
         <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="#FF1F3D68">
+
             <StackPanel>
 
-                <Grid Height="150" Background="White" IsEnabled="True" >
+                <Grid Height="150" Background="White"  IsEnabled="True" >
+                    <Image Source="C:\Users\adria\Documents\GitHub\PIV\ProjP\bike.png" />
 
-                   
                     <Button x:Name="ButtonCloseMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click" Cursor="Hand">
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
                     <Button x:Name="ButtonOpenMenu" Width="60" Height="60"  Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ButtonOpenMenu_Click">
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="Menu" Width="25" Height="25"/>
                     </Button>
+
+
                 </Grid>
 
 

@@ -8,7 +8,7 @@
              d:DataContext="{d:DesignInstance Type=viewmodels:EmployeeViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1200">
-    <Grid Background="#FFFFF7F7">
+    <Grid Background="white">
 
         <Label Content="Pracownik ID" HorizontalAlignment="Left" Margin="189,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
         <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="189,223,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
@@ -18,7 +18,7 @@
         <Label Content="Stanowisko" HorizontalAlignment="Left" Margin="183,362,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="16"/>
 
         <DataGrid Name="datagrid3" AutoGenerateColumns="False"
-                  ItemsSource="{Binding Path=EmployeesList, Mode=TwoWay}" Margin="554,124,90,346">
+                  ItemsSource="{Binding Path=EmployeesList, Mode=TwoWay}" Margin="554,124,33,346">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Pracownik Id" Width="auto"
                   Binding="{Binding Path=PracownikId}"/>
@@ -36,10 +36,10 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="InsertBtn3" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="262,659,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" />
-        <Button x:Name="UpdateBtn3" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="431,659,0,0" VerticalAlignment="Top" Cursor="Hand" />
-        <Button x:Name="DeleteBtn3" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="600,659,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" />
-        <Button x:Name="ClearDataBtn3" Command="{Binding Path=SearchCommand}" Content="Szukaj" HorizontalAlignment="Left" Margin="782,659,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100"/>
+        <Button x:Name="InsertBtn3" Command="{Binding Path=SaveCommand}" Content="Wstaw" HorizontalAlignment="Left" Margin="262,632,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" />
+        <Button x:Name="UpdateBtn3" Command="{Binding Path=UpdateCommand}" Content="Zaktualizuj" HorizontalAlignment="Left" Margin="431,632,0,0" VerticalAlignment="Top" Cursor="Hand" />
+        <Button x:Name="DeleteBtn3" Command="{Binding Path=DeleteCommand}" Content="Usuń" HorizontalAlignment="Left" Margin="600,632,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100" />
+        <Button x:Name="ClearDataBtn3" Command="{Binding Path=SearchCommand}" Content="Szukaj" HorizontalAlignment="Left" Margin="782,632,0,0" VerticalAlignment="Top" Cursor="Hand" Width="100"/>
         <TextBox Name="pracownikid_txt" Text="{Binding Path=CurrentEmployee.PracownikId, Mode=TwoWay}" HorizontalAlignment="Left" Margin="371,109,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox  Name="pesel_txt"  Text="{Binding Path=CurrentEmployee.Pesel, Mode=TwoWay}" HorizontalAlignment="Left" Margin="371,171,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox  Name="nazwisko_txt" Text="{Binding Path=CurrentEmployee.NazwiskoPracownik, Mode=TwoWay}" HorizontalAlignment="Left" Margin="371,227,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
